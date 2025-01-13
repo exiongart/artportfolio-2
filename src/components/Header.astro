@@ -1,6 +1,120 @@
 ---
+import Link from "./Link.astro"
+import Button from "./Button.astro"
 ---
-<div class="max-w-screen-xl mx-auto text-white">
-    Header/Navigation
-</div>
-    
+<div id="header-m" class="lg:hidden flex justify-between items-center w-screen p-s px-sm">
+    <a class="text-pink-100 font-primary text-h2-mobil" href="/">Emily Xiong</a>
+  
+    <div class="icons z-50">
+      <img id="burger-icon" src="/svg/burger.svg" alt="Burger icon" class="cursor-pointer">
+      <img id="close-icon" src="/svg/close.svg" alt="Close icon" class="hidden cursor-pointer">
+    </div>
+  </div>
+  
+  <div id="overlay" class="lg:hidden bg-[url('/svg/nightsky.png')] bg-cover bg-center z-0 h-screen fixed top-0 w-screen flex flex-col items-center justify-center opacity-0 pointer-events-none transition-all duration-500 ease-in-out">
+    <ul class="flex flex-col items-center justify-center gap-ml">
+      <li><Link variant="primary" size="mobile" input="Commissions" href="/commissions"></Link></li>
+      <li><Link variant="primary" size="mobile" input="Contact" href="#footer"></Link></li>
+      <li><Link variant="primary" size="mobile" input="About" href="/about"></Link></li>
+      <li><Link variant="primary" size="mobile" input="Gallery" href="/gallery"></Link></li>
+    </ul>
+  </div>
+  
+  <script>
+    const burgerIcon = document.getElementById('burger-icon');
+    const closeIcon = document.getElementById('close-icon');
+    const overlay = document.getElementById('overlay');
+  
+    // Open overlay and show close icon when burger icon is clicked
+    burgerIcon.addEventListener('click', () => {
+      overlay.classList.remove('opacity-0', 'pointer-events-none');
+      overlay.classList.add('opacity-100', 'pointer-events-auto');
+      burgerIcon.classList.add('hidden');
+      closeIcon.classList.remove('hidden');
+    });
+  
+    closeIcon.addEventListener('click', () => {
+      overlay.classList.add('opacity-0', 'pointer-events-none');
+      overlay.classList.remove('opacity-100', 'pointer-events-auto');
+      burgerIcon.classList.remove('hidden');
+      closeIcon.classList.add('hidden');
+    });
+  
+    // Close overlay and show burger icon when anywhere outside is clicked
+    overlay.addEventListener('click', (e) => {
+      if (e.target === overlay) {
+        overlay.classList.remove('opacity-100', 'pointer-events-auto');
+        overlay.classList.add('opacity-0', 'pointer-events-none');
+        closeIcon.classList.add('hidden');
+        burgerIcon.classList.remove('hidden');
+      }
+    });
+  </script>
+  
+  <style>
+    /* Optional fade-in/fade-out transition */
+    #overlay {
+      transition: opacity 0.5s ease-in-out;
+    }
+  
+    .icons img {
+      transition: opacity 0.3s ease-in-out;
+    }
+  
+   
+  </style>
+  
+  <div id="header-d" class="hidden w-screen  lg:block fixed top-0 z-50 p-sm px-m ">
+    <div class="flex justify-between w-full items-center">
+      <a class="text-pink-100 font-primary text-[50px]" href="/">Emily Xiong</a>
+      <div class="flex flex-row items-center gap-ml">
+        <div class="group relative">
+        <Link input="Commissions" href="/commissions" underline={true} variant="primary" size="desktop"></Link>
+
+        <div class="dropdown-menu rounded-xs z-0 absolute left-0 flex flex-col  justify-start items-center bg-midnight-50 w-full overflow-hidden  shadow-lg">
+          <div class="border-b py-s border-midnight-200 transition-all ease-in-out duration-300 w-full flex flex-col items-center justify-center  hover:bg-midnight-200"><Link input="How to" href="/commissions#howto" variant="primary" size="desktop" class=""></Link></div>
+           <div class="border-b py-s border-midnight-200 w-full flex flex-col items-center transition-all ease-in-out duration-300 justify-center  hover:bg-midnight-200"> <Link input="Prices" href="/commissions#prices" variant="primary" underline={false} size="desktop" class=""></Link></div>
+           <div class="border-b py-s border-midnight-200 w-full flex flex-col items-center transition-all ease-in-out duration-300 justify-center hover:bg-midnight-200 h-full"><Link input="TOS" href="/commissions#tos" variant="primary" size="desktop"></Link></div> 
+           <div class="border-b py-s border-midnight-200 w-full flex flex-col items-center transition-all ease-in-out duration-300 justify-center hover:bg-midnight-200 h-full"><Link input="Form" href="https://docs.google.com/forms/d/e/1FAIpQLSd-qw0UbjwunVFY8vxSBvIfJwSbpq196CxcETLeBO1jo2Pysw/viewform?usp=header" variant="primary" size="desktop"></Link></div> 
+          </div>
+        </div>
+
+
+        <Link input="Contact" underline={true} href="#footer" variant="primary" size="desktop"></Link>
+        <Link input="About" href="/about" underline={true} variant="primary" size="desktop"></Link>
+<div class="group relative">
+
+        <a href="/gallery" class="z-50">  <Button variant="secondaryCTA"  input="Gallery"></Button></a>
+
+        <div class="dropdown-menu rounded-xs z-0 absolute left-0 flex flex-col  justify-start items-center bg-midnight-50 w-full overflow-hidden  shadow-lg">
+          <div class="border-b py-s border-midnight-200 transition-all ease-in-out duration-300 w-full flex flex-col items-center justify-center  hover:bg-midnight-200"><Link input="2025" href="/commissions" variant="primary" size="desktop" class=""></Link></div>
+           <div class="border-b py-s border-midnight-200 w-full flex flex-col items-center transition-all ease-in-out duration-300 justify-center  hover:bg-midnight-200"> <Link input="2024" href="#footer" variant="primary" underline={false} size="desktop" class=""></Link></div>
+           <div class="border-b py-s border-midnight-200 w-full flex flex-col items-center transition-all ease-in-out duration-300 justify-center hover:bg-midnight-200 h-full"><Link input="2023" href="/about" variant="primary" size="desktop"></Link></div> 
+           <div class="border-b py-s border-midnight-200 w-full flex flex-col items-center transition-all ease-in-out duration-300 justify-center hover:bg-midnight-200 h-full"><Link input="2021" href="/about" variant="primary" size="desktop"></Link></div> 
+           <div class="border-b py-s border-midnight-200 w-full flex flex-col items-center transition-all ease-in-out duration-300 justify-center hover:bg-midnight-200 h-full"><Link input="2020" href="/about" variant="primary" size="desktop"></Link></div> 
+           <div class="border-b py-s border-midnight-200 w-full flex flex-col items-center transition-all ease-in-out duration-300 justify-center hover:bg-midnight-200 h-full"><Link input="2019" href="/about" variant="primary" size="desktop"></Link></div> 
+          </div>
+
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+  
+<style>
+
+
+.dropdown-menu {
+  max-height: 0%; 
+ 
+}
+
+.group:hover .dropdown-menu {
+  max-height: 1000%; 
+  transition: all 800ms ease-in-out,;/* Show the dropdown when hovering */
+ 
+}
+
+
+</style>

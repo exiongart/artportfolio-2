@@ -1,5 +1,42 @@
 ---
-// Henter parametrene fra Astro.props
-const { href="#", target="_self"} = Astro.props; 
+const { href = "#", variant = "primary", size = "desktop", underline = false, input } = Astro.props;
+
+const linkStyling = "relative transition-all duration-300 ease-in-out text-center font-primary";
+
+const variantClasses = {
+  primary: "text-pink-100",
+  secondary: "text-midnight-500",
+};
+
+const sizeClasses = {
+  desktop: "text-link-desktop",
+  mobile: "text-link-mobile",
+};
+
+const underlineColorClasses = {
+  primary: "bg-pink-100",
+  secondary: "bg-midnight-500",
+};
 ---
-<a href={href} class="underline" target={target}><slot /></a>
+
+<a
+  href={href}
+  class:list={[linkStyling, variantClasses[variant], sizeClasses[size]]}
+  data-navlink
+>
+  {input}
+  {underline && (
+    <span
+      class:list={[
+        "absolute left-0 bottom-0 w-0 h-[0.5px] transition-all duration-300",
+        underlineColorClasses[variant],
+      ]}
+    ></span>
+  )}
+</a>
+
+<style>
+  a:hover span {
+    width: 100%; /* Expand underline on hover */
+  }
+</style>

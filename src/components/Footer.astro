@@ -1,6 +1,83 @@
 ---
+import Link from "./Link.astro"
+import Button from "./Button.astro"
 ---
-<div>
-    <p class="max-w-screen-xl mx-auto text-white">Footer - tilføj footerindhold</p>
+<div id="footer-m" class="lg:hidden relative flex flex-col items-center justify-center ">
+
+
+    
+
+    <div class="flex flex-col items-center justify-center gap-xl mb-[140px]">
+
+<div class="flex flex-col items-center justify-center gap-sm">
+   <a href="https://www.instagram.com/exiongart/"> <img src="/svg/icon-instagram-light.svg" alt="Instagram icon"></a>
+   <Link underline={true} input="@exiongart" href="https://www.instagram.com/exiongart/" size="mobile"></Link>
 </div>
-      
+
+<div class="flex flex-col items-center justify-center gap-sm">
+   <a href="https://www.tiktok.com/@artsbyemi"> <img src="/svg/icon-tiktok-light.svg" class="" alt="Tiktok icon"></a>
+   <Link underline={true} input="@artsbyemi" href="https://www.tiktok.com/@artsbyemi" size="mobile"></Link>
+</div>
+
+
+<div class="flex flex-col items-center justify-center gap-sm">
+   <a href="mailto:exiong@gmail.com"> <img src="/svg/icon-mail-light.svg" alt="Mail icon"></a>
+   <Link underline={true} input="exiong@gmail.com" href="mailto:exiong@gmail.com" size="mobile"></Link>
+</div>
+
+<a href="#hero"><Button variant="secondaryDefault" input="Top" icon="/svg/icon-arrow-up-light.svg" ></Button></a>
+
+
+<img src="/svg/cloud-r-crop.svg" class="absolute -bottom-0 -right-28" alt="CLoud">
+<img src="/svg/cloud-l-crop.svg" class="absolute -bottom-0 -left-28" alt="CLoud">
+
+    </div>
+
+   
+
+</div>
+
+
+
+
+
+
+
+<div id="footer-d" class="h-[500px] hidden relative lg:flex flex-col items-center justify-center ">
+
+
+    
+<div class="flex flex-col items-center justify-center gap-ml mb-xxl ">
+    <div class="flex items-center justify-center gap-xl ">
+
+<div class="flex flex-col items-center justify-center gap-sm w-[200px]">
+   <a href="https://www.instagram.com/exiongart/"> <img src="/svg/icon-instagram-light.svg" alt="Instagram icon"></a>
+   <Link underline={true} input="@exiongart" href="https://www.instagram.com/exiongart/" size="desktop"></Link>
+</div>
+
+<div class="flex flex-col items-center justify-center gap-sm w-[200px]">
+   <a href="https://www.tiktok.com/@artsbyemi"> <img src="/svg/icon-tiktok-light.svg" class="" alt="Tiktok icon"></a>
+   <Link underline={true} input="@artsbyemi" href="https://www.tiktok.com/@artsbyemi" size="desktop"></Link>
+</div>
+
+
+<div class="flex flex-col items-center justify-center gap-sm w-[200px]">
+   <a href="mailto:exiong@gmail.com"> <img src="/svg/icon-mail-light.svg" alt="Mail icon"></a>
+   <Link underline={true} input="exiong@gmail.com" href="mailto:exiong@gmail.com" size="desktop"></Link>
+</div>
+
+
+</div>
+
+
+<a href="#hero"><Button variant="secondaryDefault" input="Top" icon="/svg/icon-arrow-up-light.svg" ></Button></a>
+
+</div>
+
+
+
+    <img src="/svg/cloud-r-crop.svg" class="absolute -bottom-0 -right-28 w-1/2" alt="CLoud">
+    <img src="/svg/cloud-l-crop.svg" class="absolute -bottom-0 -left-28  w-1/2" alt="CLoud">
+   
+
+</div>

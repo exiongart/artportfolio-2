@@ -4,69 +4,137 @@ export default {
 
     /* Vil du overskrive eller extende tailwinds indstillinger?  */
 
-	theme: {
-
-        /* Tilføj din egen farvepalette nedenfor */
-        // colors: {
-        //     transparent: 'transparent',
-        //     current: 'currentColor',
-        //     'farvenavn': {
-        //         50: '#hexkode',     
-        //         100: '#hexkode',
-        //         200: '#hexkode',
-        //         300: '#hexkode',
-        //         400: '#hexkode',
-        //         500: '#hexkode',
-        //         600: '#hexkode',
-        //         700: '#hexkode',
-        //         800: '#hexkode',
-        //         900: '#hexkode',
-        //     },
-        //     'white': '#fff',
-        //     'black': '#000',
-        // },
-
-         /* Tilføj din egen spacing nedenfor */
-        // spacing: {
-        //     'm': '40px',
-        // },
-
-        /* Tilføj fonte herunder - husk også at tilføje webfonte i head-sektionen i MainLayout  */
-        // fontFamily: {
-        //     sans: ['Prompt', 'sans-serif'],
-        //     'display': ['Courier', 'monospace'], /* eksempel på ekstra font */
-        // },
-
-        /* Tilføj dit typografiske hierarki herunder */
-        // fontSize: {
-        //     base: ['1rem', { lineHeight: '1.5rem' }],
-        //     large: ['2.5rem', { lineHeight: '3.75rem' }],
-        //   },
-
-        /* Tilføj dit fontvægt-hierarki nedenfor */
-        //   fontWeight: {
-        //     regular: '400',
-        //   },
-
-        /* Borders - borderstørrelser herunder */
-        // borderWidth: {
-        //     DEFAULT: '1px',
-        //     0: '0px',
-        //     2: '2px',
-        // },
-
-        /* Border radius størrelser herunder */
-        // borderRadius: {
-        //     DEFAULT: '1.25rem',
-        //     none: '0px',
-        // },
-
-        /* Box shadows herunder */
-        // boxShadow: {
-        //     drop25: '4px 4px 4px 0 rgb(0 0 0 / 0.25)', /* x y blur spread farve / opacity */  
-        // },
+	theme: {   
 
 		extend: {
+
+      cursor: {
+        'handcursor': 'url(/cursor.png) 25 25, pointer',
+      },
+
+      
+    
+            opacity:{
+                50: '.50',   
+   
+            },
+
+         /* Tilføj din egen spacing nedenfor */
+        spacing: {
+            'xxs': '2px',
+            'xs':'4px',
+            's':'8px',
+            'sm':'24px',
+            'm':'36px',
+            'ml':'50px',
+            'l':'70px',
+            'xl':'80px',
+            'xxl':'90px',
+            'full':'999px',
+      },
+
+      /* Tilføj fonte herunder - husk også at tilføje webfonte i head-sektionen i MainLayout  */
+      fontFamily:{
+        
+        'primary':['"Sansation Light"','sans-serif'],
+        
+      },
+
+      fontWeight:{
+         regular:'400',
+         semibold:'600',
+         bold:'700',
+
+      },
+
+      borderWidth:{
+         DEFAULT:'1px',
+
+      },
+
+      borderRadius:{
+        DEFAULT:'1px',
+        'xxs': '2px',
+        'xs':'4px',
+        's':'8px',
+        'sm':'24px',
+        'm':'36px',
+        'ml':'50px',
+        'l':'70px',
+        'xl':'80px',
+        'xxl':'90px',
+        'full':'999px',
+
+     },
+
+     
+
+      
+
+         /* Tilføj dit typografiske hierarki herunder */
+     fontSize: {
+        'h1-display-mobil': ['40px', { lineHeight: 'auto' }],
+       'h1-mobil': ['34px', { lineHeight: 'auto' }],
+         'h2-mobil': ['38px', { lineHeight: 'auto' }],
+         'h3-mobil': ['16px', { lineHeight: 'auto' }],
+         'link-mobil': ['20px', { lineHeight: 'auto' }],
+         'button-mobil': ['20px', { lineHeight: 'auto' }],
+         'table-mobil': ['12px', { lineHeight: '32px' }],
+         'body-mobil': ['16px', { lineHeight: 'auto' }],
+
+         'h1-display-desktop': ['50px', { lineHeight: 'auto' }],
+         'h1-desktop': ['56px', { lineHeight: 'auto' }],
+         'h2-desktop': ['28px', { lineHeight: 'auto' }],
+         'h3-mobil': ['32px', { lineHeight: 'auto' }],
+         'link-desktop': ['24px', { lineHeight: 'auto' }],
+         'button-desktop': ['24px', { lineHeight: 'auto' }],
+         'table-desktop': ['32px', { lineHeight: '32px' }],
+         'body-desktop': ['20px', { lineHeight: 'auto' }],
+        
+      },
+
+      gridTemplateColumns: {
+        'grid-mobil': 'repeat(4, 1fr)',
+        'grid-desktop': 'repeat(12, 1fr)',
+
+      },
+
+   margin:{
+    'margin-mobil': '16px',
+    'margin-desktop': '96px',
+},
+
+gap:{
+    'gap-mobil': '16px',
+    'gap-tablet': '32px',
+    'gap-desktop': '40px',
+},
+
+
+         colors: {
+                    transparent: 'transparent',
+                   current: 'currentColor',
+                   
+                   midnight: {
+                    200: '#2A3344',
+                500: '#15151D',
+                50: '#2A334480',
+                
+                   
+                 },
+                pink: {
+                      
+                    100: '#F8E7E1',
+                    500: '#EC97C0',
+                   600: '#CB5D97',
+                   
+                   50: '#F8E7E180',
+                 },
+
+                
+                  
+                },
+
         },
 	},
 	plugins: [

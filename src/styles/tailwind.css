@@ -7,3 +7,10 @@
         @apply text-body;
     } */
 }
+
+@font-face {
+    font-family: 'Sansation Light';
+    src: url('/font/SansationLight-a5E5.woff2') format('woff2');
+    font-weight: 300; /* Light weight */
+    font-style: normal;
+  }

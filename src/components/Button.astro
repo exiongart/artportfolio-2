@@ -1,5 +1,55 @@
 ---
+const { variant = "primary", input, icon } = Astro.props;
+
+// gælder for alle //
+const buttonStyling =
+  " transition-all duration-300 text-button-mobil lg:text-button-desktop lg:min-w-[160px] ease-in-out py-[16px] px-[36px] lg:py-[14px] lg:px-xxs border rounded-xxs font-primary whitespace-nowrap  ";
+
+const variantClasses = {
+  primaryDefault:
+    "border-midnight-500 hover:bg-pink-600 text-midnight-500 ",
+
+  primaryCTA:
+    "button-pulsate border-midnight-500 text-midnight-500 hover:bg-midnight-500 bg-pink-600",
+
+  secondaryDefault:
+    "border-pink-100 text-pink-100 hover:bg-pink-600 ",
+
+  secondaryCTA:
+    "button-pulsate border-pink-100 bg-pink-600 text-pink-100 hover:bg-transparent",
+};
 ---
-<div>
-    <button class="border-2 border-black"><slot /></button>
-</div>
+
+<button
+  class="buttonComponent flex flex-row items-center justify-center lg:gap-sm gap-[16px]"
+  class:list={[buttonStyling, variantClasses[variant]]}
+>
+  <div class="">{input}</div>
+  
+  {icon && <img src={icon} alt="Icon" class="icon" />}
+</button>
+
+
+<script>
+
+
+
+import gsap from "gsap";
+ 
+ import { ScrollTrigger } from "gsap/ScrollTrigger";
+ 
+ gsap.registerPlugin(ScrollTrigger);
+
+
+
+ gsap.to(".button-pulsate", {
+  scale: 1.1,        // Slight pulsate (you can adjust the scale to fit your needs)           // Moves the button 40px to the left (optional)
+  delay: 0,          // Delay before animation starts
+  ease: "power1.out", // Easing for smooth animation
+  duration: 1.1,      // Duration of the animation
+  repeat: -1,         // Repeats indefinitely for a pulsating effect
+  yoyo: true          // Makes the animation reverse back to the start
+});
+
+
+</script>
