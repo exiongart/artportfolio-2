@@ -1,0 +1,777 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Button from '../components/Button.astro';
+import Link from '../components/Link.astro';
+import { Image } from 'astro:assets';
+import thumbsup from "../assets/images/thumbsup.png";
+import Quote from "../components/Quote.astro";
+
+import Table from "../components/Table.astro";
+---
+<MainLayout title="Exiong Art Portfolio">
+	
+
+
+<section id="hero" class="overflow-x-hidden overflow-hidden relative">
+
+<section id="hero-d" class=" h-screen  flex flex-col items-center justify-center mx-margin-mobil lg:mx-margin-desktop ">
+
+ 
+    <div class="z-0 lg:hidden">
+        <img src="/svg/4-star.svg" class=" star absolute w-7 left-2" alt="Star">
+        <img src="/svg/7-star.svg" class="top-[68%] star-7 absolute  w-10 right-[10%]" alt="Big star">
+        
+        <img src="/svg/dots.svg" class=" absolute w-20 right-[2%] top-[16%]" alt="Tiny stars">
+        <img src="/svg/dots.svg" class=" absolute w-20 left-0  top-[35%]" alt="Tiny stars">
+        <img src="/svg/dots.svg" class=" absolute w-20 left-10  top-[55%]" alt="Tiny stars">
+        <img src="/svg/dots.svg" class=" absolute w-20 right-[40%]  top-[5%]" alt="Tiny stars">
+    
+        <img src="/svg/dots.svg" class=" absolute w-20 left-[30%]  top-[75%]" alt="Tiny stars">
+     
+        
+      </div>
+    
+    
+    
+      <div class="z-0 lg:block hidden">
+        <img src="/svg/4-star.svg" class="top-[15%] star absolute  w-7 left-[70%]" alt="Star">
+        <img src="/svg/4-star.svg" class="top-[19%] star absolute  w-7 left-[20%]" alt="Star">
+        <img src="/svg/dots.svg" class="top-[30%]  absolute  w-40 left-[20%]" alt="Tiny stars">
+        <img src="/svg/dots.svg" class="top-[4%]  absolute  w-40 left-[34%]" alt="Tiny stars">
+        <img src="/svg/dots.svg" class="top-[10%]  absolute  w-40 left-[54%]" alt="Tiny stars">
+        <img src="/svg/dots.svg" class="top-[50%]  absolute  w-40 left-[70%]" alt="Tiny stars">
+        <img src="/svg/dots.svg" class="top-[70%]  absolute  w-40 right-[54%]" alt="Tiny stars">
+        <img src="/svg/dots.svg" class="top-[80%]  absolute  w-40 right-[74%]" alt="Tiny stars">
+        <img src="/svg/dots.svg" class=" absolute w-40 left-[2%] top-[16%]" alt="Tiny stars">
+        <img src="/svg/dots.svg" class=" absolute w-40 right-[2%] top-[80%]" alt="Tiny stars">
+        <img src="/svg/7-star.svg" class="top-[38%] star-7 absolute  w-20 left-[10%]" alt="Big star">
+        <img src="/svg/7-star.svg" class="top-[68%] star-7 absolute  w-10 right-[10%]" alt="Big star">
+        <img src="/svg/7-star.svg" class="top-[68%] star-7 absolute  w-10 left-[10%]" alt="Big star">
+        <img src="/svg/7-star.svg" class="top-[38%] star-7 absolute  w-20 right-[10%]" alt="Big star">
+        <img src="/svg/dots.svg" class=" absolute w-40 left-[2%] top-[16%]" alt="Tiny stars">
+        
+        <img src="/svg/dots.svg" class=" absolute w-40 right-[2%] top-[16%]" alt="Tiny stars">
+        
+    
+        
+      </div>
+    
+
+
+
+
+    
+<div class="flex flex-col items-center justify-center gap-xxl">
+    <div class="fade-in">
+    <Quote class="" quote="Great art picks up where nature ends." author="Edgar Degas"></Quote>
+
+  </div>
+
+<div class=" bounce flex flex-row gap-s opacity-50 ">
+  <p class="font-primary text-body-mobil lg:text-body-desktop text-pink-100 text-center">Commission me</p>
+  <img class="w-4" src="/svg/icon-arrow-down-light.svg" alt="Arrow">
+</div>
+</div>
+        
+    </section>
+
+
+</section>
+
+
+
+
+<section id="subhero" class="overflow-x-hidden bg-pink-100 ">
+  <section id="" class=" mx-margin-mobil  lg:mx-margin-desktop py-l flex flex-col items-center lg:items-start gap-xl justify-center">
+
+
+<h1 class="h1 text-h1-mobil lg:text-h1-desktop lg:self-start font-primary text-midnight-500 lg:text-start text-center">Commissions</h1>
+
+<p class="font-primary text-midnight-500 text-body-mobil lg:text-body-desktop">
+   <span class="text-pink-600">Important: </span> By commissioning me, you agree to  the <a href="#tos" class="text-pink-600 underline">terms of service</a>. <br> <br>
+Welcome to my commissions page! 
+<br> <br>
+I'm excited to create something unique and meaningful for you. Whether you're looking for a personal piece, a gift, or something special to bring your vision to life, I'm here to help.
+<br><br>
+Scroll down to see my <a class="underline text-pink-600" href="#prices">prices</a> and what I can offer you.
+<br><br>
+To commission me you must fill out a form first. I will review it and get back to you then.
+</p>
+
+ 
+<a class="pt-l" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSd-qw0UbjwunVFY8vxSBvIfJwSbpq196CxcETLeBO1jo2Pysw/viewform?usp=dialog"> <Button input="Form" icon="/svg/icon-arrow-right-light.svg" variant="secondaryCTA"></Button></a>
+  
+
+
+
+  </section>
+</section>
+
+
+
+<section id="howto" class="py-m overflow-x-hidden px-margin-mobil lg:px-margin-desktop">
+
+
+  
+    <div class="z-0 lg:hidden">
+      <img src="/svg/4-star.svg" class=" star absolute right-[4%] w-4  top-[245%]" alt="Star">
+      <img src="/svg/4-star.svg" class=" star absolute left-[2%] w-9  top-[285%]" alt="Star">
+      <img src="/svg/7-star.svg" class="star-7 absolute w-12 right-[0%] top-[390%]" alt="Big star">
+     
+      <img src="/svg/dots.svg" class=" absolute w-20 left-0  top-[245%]" alt="Tiny stars">
+      <img src="/svg/dots.svg" class=" absolute w-20 right-10  top-[260%]" alt="Tiny stars">
+      <img src="/svg/dots.svg" class=" absolute w-20 left-50  top-[300%]" alt="Tiny stars">
+      <img src="/svg/dots.svg" class=" absolute w-20 right-[0%]  top-[320%]" alt="Tiny stars">
+      <img src="/svg/dots.svg" class=" absolute w-20 left-50  top-[350%]" alt="Tiny stars">
+      <img src="/svg/dots.svg" class=" absolute w-20 left-50  top-[310%]" alt="Tiny stars">
+      <img src="/svg/dots.svg" class=" absolute w-20 left-50  top-[380%]" alt="Tiny stars">
+      <img src="/svg/dots.svg" class=" absolute w-20 left-0  top-[310%]" alt="Tiny stars">
+      <img src="/svg/dots.svg" class=" absolute w-20 right-0  top-[210%]" alt="Tiny stars">
+      <img src="/svg/dots.svg" class=" absolute w-20 right-[2%] top-[220%]" alt="Tiny stars">
+      <img src="/svg/dots.svg" class=" absolute w-20 right-[2%] top-[300%]" alt="Tiny stars">
+      <img src="/svg/dots.svg" class=" absolute w-20 left-[2%] top-[310%]" alt="Tiny stars">
+      <img src="/svg/dots.svg" class=" absolute w-20 left-10  top-[267%]" alt="Tiny stars">
+      <img src="/svg/dots.svg" class=" absolute w-20 left-[60%]  top-[270%]" alt="Tiny stars">
+      <img src="/svg/7-star.svg" class="star-7 absolute w-12 left-[6%] top-[260%]" alt="Big star">
+      
+      
+  
+      <img src="/svg/dots.svg" class=" absolute w-20 left-[30%]  top-[75%]" alt="Tiny stars">
+      <img src="/svg/7-star.svg" class="star-7 absolute w-12 left-[15%] top-[80%]" alt="Big star">
+      
+    </div>
+  
+  
+  
+    <div class="z-0 lg:block hidden">
+      <img src="/svg/4-star.svg" class="top-[355%] star absolute  w-7 left-[70%]" alt="Star">
+      <img src="/svg/4-star.svg" class="top-[399%] star absolute  w-7 left-[20%]" alt="Star">
+      <img src="/svg/dots.svg" class="top-[200%]  absolute  w-40 left-[20%]" alt="Tiny stars">
+      <img src="/svg/dots.svg" class="top-[234%]  absolute  w-40 left-[34%]" alt="Tiny stars">
+      <img src="/svg/dots.svg" class="top-[220%]  absolute  w-40 left-[54%]" alt="Tiny stars">
+      <img src="/svg/dots.svg" class="top-[280%]  absolute  w-40 left-[5%]" alt="Tiny stars">
+      <img src="/svg/dots.svg" class="top-[290%]  absolute  w-40 right-[54%]" alt="Tiny stars">
+      <img src="/svg/dots.svg" class="top-[240%]  absolute  w-40 right-[20%]" alt="Tiny stars">
+      <img src="/svg/dots.svg" class="top-[300%]  absolute  w-40 right-[4%]" alt="Tiny stars">
+      <img src="/svg/4-star.svg" class="top-[305%] star absolute  w-7 right-[50%]" alt="Star">
+      <img src="/svg/dots.svg" class=" absolute w-40 right-[2%] top-[316%]" alt="Tiny stars">
+     
+      <img src="/svg/7-star.svg" class="top-[228%] star-7 absolute  w-20 right-[10%]" alt="Big star">
+      <img src="/svg/dots.svg" class=" absolute w-40 left-[50%] top-[416%]" alt="Tiny stars">
+      
+      <img src="/svg/dots.svg" class=" absolute w-40 right-[2%] top-[416%]" alt="Tiny stars">
+      
+  
+     
+   
+      
+    </div>
+  
+  
+  
+  <div class="gap-l  mx-margin-mobil lg:m-margin-desktop flex  flex-col items-center justify-center lg:items-start">
+  
+    <div class="h1">
+  <h1 class=" font-primary text-h1-mobil text-center lg:text-start lg:text-h1-desktop text-pink-100">How to commission me</h1>
+
+  </div>
+  
+  
+  
+  <div class="flex gap-m lg:gap-l lg:flex-row flex-col lg:h-[400px]">
+  
+  
+    <article class="card-1 flex flex-col gap-s p-m border border-pink-100 h-[300px] lg:h-[300px] lg:w-[400px] ">
+      <h2 class="font-primary text-pink-100 text-h2-mobil lg:text-h2-desktop ">1: Submit a request</h2>
+      <p class="text-pink-100 font-primary text-body-mobil lg:text-body-desktop">Fill out the commission form with your name, email, Instagram and details about your request.</p>
+    </article>
+  
+  
+    <article class="card-1 flex flex-col gap-s p-m border border-pink-100 lg:relative lg:top-20 h-[300px] lg:h-[300px] lg:w-[400px]">
+      <h2 class="font-primary text-pink-100 text-h2-mobil lg:text-h2-desktop  whitespace-nowrap">2: I contact you</h2>
+      <p class="text-pink-100 font-primary text-body-mobil lg:text-body-desktop">I will review your request and contact you via Instagram DMs.</p>
+    </article>
+  
+  
+    <article class="card-1 flex flex-col gap-s p-m border border-pink-100 col lg:relative lg:top-40 h-[300px] lg:h-[300px] lg:w-[400px]">
+      <h2 class="font-primary text-pink-100 text-h2-mobil lg:text-h2-desktop ">3: That's it</h2>
+      <p class="text-pink-100 font-primary text-body-mobil lg:text-body-desktop">And then we'll take it from there. <br> <br>
+  
+        For more information about the process, read the <a href="#tos" class="underline text-pink-600">terms of service</a>.</p>
+    </article>
+  
+  
+  </div>
+  
+  
+  <a class="pt-l" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSd-qw0UbjwunVFY8vxSBvIfJwSbpq196CxcETLeBO1jo2Pysw/viewform?usp=dialog"> <Button input="Form" icon="/svg/icon-arrow-right-light.svg" variant="secondaryCTA"></Button></a>
+  
+  </div>
+  
+  </section>
+  
+  
+  
+
+  <section id="prices" class="py-m overflow-x-hidden px-margin-mobil lg:px-margin-desktop">
+    <div class="z-0 lg:hidden">
+      <img src="/svg/4-star.svg" class=" star absolute right-[2%] w-4  top-[495%]" alt="Star">
+      <img src="/svg/4-star.svg" class=" star absolute left-[2%] w-9  top-[535%]" alt="Star">
+      <img src="/svg/7-star.svg" class="star-7 absolute w-12 right-[0%] top-[450%]" alt="Big star">
+     
+      <img src="/svg/dots.svg" class=" absolute w-20 right-0  top-[545%]" alt="Tiny stars">
+      <img src="/svg/dots.svg" class=" absolute w-20 right-10  top-[560%]" alt="Tiny stars">
+      <img src="/svg/dots.svg" class=" absolute w-20 left-0  top-[490%]" alt="Tiny stars">
+      <img src="/svg/dots.svg" class=" absolute w-20 left-[50%]  top-[520%]" alt="Tiny stars">
+      <img src="/svg/dots.svg" class=" absolute w-20 left-0  top-[450%]" alt="Tiny stars">
+      <img src="/svg/dots.svg" class=" absolute w-20 left-0  top-[550%]" alt="Tiny stars">
+      <img src="/svg/dots.svg" class=" absolute w-20 left-0  top-[580%]" alt="Tiny stars">
+      <img src="/svg/dots.svg" class=" absolute w-20 left-0  top-[510%]" alt="Tiny stars">
+      <img src="/svg/dots.svg" class=" absolute w-20 right-0  top-[510%]" alt="Tiny stars">
+      <img src="/svg/dots.svg" class=" absolute w-20 left-[2%] top-[620%]" alt="Tiny stars">
+      <img src="/svg/dots.svg" class=" absolute w-20 right-[2%] top-[650%]" alt="Tiny stars">
+      <img src="/svg/dots.svg" class=" absolute w-20 left-[2%] top-[410%]" alt="Tiny stars">
+      <img src="/svg/dots.svg" class=" absolute w-20 left-10  top-[467%]" alt="Tiny stars">
+      <img src="/svg/dots.svg" class=" absolute w-20 left-[60%]  top-[470%]" alt="Tiny stars">
+      <img src="/svg/7-star.svg" class="star-7 absolute w-12 left-[6%] top-[650%]" alt="Big star">
+      
+      
+  
+      <img src="/svg/dots.svg" class=" absolute w-20 left-[30%]  top-[75%]" alt="Tiny stars">
+      <img src="/svg/7-star.svg" class="star-7 absolute w-12 left-[15%] top-[80%]" alt="Big star">
+      
+    </div>
+    <div class="z-0 lg:block hidden">
+      <img src="/svg/4-star.svg" class="top-[355%] star absolute  w-7 left-[70%]" alt="Star">
+      <img src="/svg/4-star.svg" class="top-[399%] star absolute  w-7 left-[20%]" alt="Star">
+      <img src="/svg/dots.svg" class="top-[400%]  absolute  w-40 left-[20%]" alt="Tiny stars">
+      <img src="/svg/dots.svg" class="top-[334%]  absolute  w-40 left-[34%]" alt="Tiny stars">
+      <img src="/svg/dots.svg" class="top-[580%]  absolute  w-40 left-[54%]" alt="Tiny stars">
+      <img src="/svg/dots.svg" class="top-[320%]  absolute  w-40 left-[5%]" alt="Tiny stars">
+      <img src="/svg/dots.svg" class="top-[560%]  absolute  w-40 left-[54%]" alt="Tiny stars">
+      <img src="/svg/dots.svg" class="top-[600%]  absolute  w-40 right-[20%]" alt="Tiny stars">
+      <img src="/svg/dots.svg" class="top-[380%]  absolute  w-40 right-[4%]" alt="Tiny stars">
+      <img src="/svg/4-star.svg" class="top-[415%] star absolute  w-7 right-[50%]" alt="Star">
+      <img src="/svg/dots.svg" class=" absolute w-40 left-[2%] top-[590%]" alt="Tiny stars">
+     
+      <img src="/svg/7-star.svg" class="top-[590%] star-7 absolute  w-20 right-[10%]" alt="Big star">
+      <img src="/svg/dots.svg" class=" absolute w-40 left-[50%] top-[516%]" alt="Tiny stars">
+      
+      <img src="/svg/dots.svg" class=" absolute w-40 right-[2%] top-[560%]" alt="Tiny stars">
+      
+  
+     
+   
+      
+    </div>
+  
+  
+  
+  <div class="gap-l  mx-margin-mobil lg:m-margin-desktop flex  flex-col items-center justify-center lg:items-start">
+  
+
+  <h1 class="h1 font-primary text-h1-mobil lg:text-h1-desktop text-pink-100">Prices</h1>
+
+<article class="overflow-x-hidden card-1 article-1 flex flex-col items-start gap-s bg-midnight-50 rounded-xxs p-s">
+    <div>
+        <p class="font-primary text-pink-100 text-body-mobil lg:text-body-desktop whitespace-nowrap">Commercial use = +75% of full price</p>
+        <div class="h-[1px] bg-midnight-200"></div>
+    </div>
+    <div>
+        <p class="font-primary text-pink-100 text-body-mobil lg:text-body-desktop whitespace-nowrap">Commercial use = +75% of full price</p>
+        <div class="h-[1px] bg-midnight-200"></div>
+    </div>
+    <div>
+        <p class="font-primary text-pink-100 text-body-mobil lg:text-body-desktop whitespace-nowrap">Commercial use = +75% of full price</p>
+        <div class="h-[1px] bg-midnight-200"></div>
+    </div>
+</article>
+  
+<h2 class="h2-digital font-primary text-h2-mobil lg:text-h2-desktop text-pink-100">Digital</h2>
+  
+<article class="overflow-x-hidden card-1 article-2 flex flex-col gap-xxs">
+
+    <div class="flex flex-row gap-xxs">
+        <Table variant="header" input="Digital"></Table>
+        <Table variant="header" input="Lineart"></Table>
+        <Table variant="header" input="Flat colors"></Table>
+        <Table variant="header" input="Rendered"></Table>
+    </div>
+
+    
+    <div class=" overflow-x-hidden flex flex-row gap-xxs">
+        <Table variant="header" input="Portrait"></Table>
+        <Table variant="body" input="30 DKK ($5)"></Table>
+        <Table variant="body" input="45 DKK ($8)"></Table>
+        <Table variant="body" input="70 DKK ($12)"></Table>
+    </div>
+    <div class="overflow-x-hidden flex flex-row gap-xxs">
+        <Table variant="header" input="Half body"></Table>
+        <Table variant="body" input="45 DKK ($8)"></Table>
+        <Table variant="body" input="65 DKK ($11)"></Table>
+        <Table variant="body" input="105 DKK ($17.5)"></Table>
+    </div>
+    <div class="overflow-x-hidden flex flex-row gap-xxs">
+        <Table variant="header" input="Full body"></Table>
+        <Table variant="body" input="65 DKK ($11)"></Table>
+        <Table variant="body" input="100 DKK ($16)"></Table>
+        <Table variant="body" input="140 DKK ($23.5)"></Table>
+    </div>
+
+</article>
+  
+
+<article class="card-1 article-3 flex flex-col items-start gap-s bg-midnight-50 rounded-xxs p-s">
+    <div class="w-full">
+        <p class="font-primary text-pink-100 text-body-mobil lg:text-body-desktop whitespace-nowrap">+ character = +50%</p>
+        <div class="h-[1px] w-full bg-midnight-200"></div>
+    </div>
+    <div class="w-full">
+        <p class="font-primary text-pink-100 text-body-mobil lg:text-body-desktop whitespace-nowrap">+ background = +30 DKK ($5)</p>
+        <div class="h-[1px] w-full bg-midnight-200"></div>
+    </div>
+    <div class="w-full">
+        <p class="font-primary text-pink-100 text-body-mobil lg:text-body-desktop whitespace-nowrap">+ detailed background = +45 DKK ($8)</p>
+        <div class="h-[1px] w-full bg-midnight-200"></div>
+    </div>
+</article>
+
+<h2 class="h2-paper font-primary text-h2-mobil lg:text-h2-desktop text-pink-100">Paper</h2>
+
+
+
+<article class="card-1 article-4 flex flex-col gap-xxs">
+
+    <div class="flex flex-row gap-xxs">
+        <Table variant="header" input="Paper"></Table>
+        <Table variant="header" input="Pencil sketch"></Table>
+        <Table variant="header" input="Colored pencil"></Table>
+        <Table variant="header" input="Watercolors"></Table>
+    </div>
+
+    
+    <div class="flex flex-row gap-xxs">
+        <Table variant="header" input="A4"></Table>
+        <Table variant="body" input="150 DKK ($21)"></Table>
+        <Table variant="body" input="300 DKK ($42)"></Table>
+        <Table variant="body" input="430 DKK ($59)"></Table>
+    </div>
+    <div class="flex flex-row gap-xxs">
+        <Table variant="header" input="A3"></Table>
+        <Table variant="body" input="225 DKK ($31.5)"></Table>
+        <Table variant="body" input="450 DKK ($63)"></Table>
+        <Table variant="body" input="645 DKK ($88.5)"></Table>
+    </div>
+   
+
+</article>
+
+
+
+
+<h2 class="h2-canvas font-primary text-h2-mobil lg:text-h2-desktop text-pink-100">Canvas</h2>
+
+
+
+<article class="card-1 article-5 flex flex-col gap-xxs">
+
+    <div class="flex flex-row gap-xxs">
+        <Table variant="header" input="Canvas"></Table>
+        <Table variant="header" input="Acrylic"></Table>
+        
+    </div>
+
+    
+    <div class="flex flex-row gap-xxs">
+        <Table variant="header" input="Small"></Table>
+        <Table variant="body" input="300 DKK ($42)"></Table>
+       
+    </div>
+    <div class="flex flex-row gap-xxs">
+        <Table variant="header" input="Medium"></Table>
+        <Table variant="body" input="500 DKK ($69)"></Table>
+       
+    </div>
+    <div class="flex flex-row gap-xxs">
+        <Table variant="header" input="Large"></Table>
+        <Table variant="body" input="1000 DKK ($138)"></Table>
+       
+    </div>
+  
+   
+
+</article>
+  
+<a class="pt-l" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSd-qw0UbjwunVFY8vxSBvIfJwSbpq196CxcETLeBO1jo2Pysw/viewform?usp=dialog"> <Button input="Form" icon="/svg/icon-arrow-right-light.svg" variant="secondaryCTA"></Button></a>
+   
+  </div>
+  
+  </section>
+  
+
+  <section id="tos" class=" bg-pink-100 ">
+    <section id="" class=" mx-margin-mobil  lg:mx-margin-desktop py-l flex flex-col items-center lg:items-start gap-xl justify-center">
+  
+
+        <div class="tos-buttons card-1 lg:sticky relative top-10  lg:top-32 z-[121]  self-center ">
+            <div class="lg:absolute lg:left-96">
+            <div class="flex flex-wrap lg:flex-col justify-start lg:items-end lg:justify-end items-start gap-xs lg:gap-sm ">
+            <a href="#generel" class="transition-all ease-in-out duration-300 transform hover:scale-[104%] bg-pink-50 w-[150px] lg:w-[200px] border border-pink-500 p-s rounded-xxs text-button-mobil lg:text-button-desktop text-pink-100 text-center">Generel terms</a>
+       
+            <a href="#refusal" class="transition-all ease-in-out duration-300 transform hover:scale-[104%] bg-pink-50 lg:w-[200px] border border-pink-500 p-s rounded-xxs text-button-mobil lg:text-button-desktop text-pink-100 text-center">Refusal</a>
+            <a href="#payment" class="transition-all ease-in-out duration-300 transform hover:scale-[104%] bg-pink-50 lg:w-[200px] border border-pink-500 p-s rounded-xxs text-button-mobil lg:text-button-desktop text-pink-100 text-center">Payment</a>
+            <a href="#process" class="transition-all ease-in-out duration-300 transform hover:scale-[104%] bg-pink-50 lg:w-[200px] border border-pink-500 p-s rounded-xxs text-button-mobil lg:text-button-desktop text-pink-100 text-center">Process</a>
+            <a href="#copyright" class="transition-all ease-in-out duration-300 transform hover:scale-[104%] bg-pink-50 lg:w-[200px] border border-pink-500 p-s rounded-xxs text-button-mobil lg:text-button-desktop text-pink-100 text-center">Copyright</a>
+            <a href="#cancel" class="transition-all ease-in-out duration-300 transform hover:scale-[104%] bg-pink-50 lg:w-[200px] border border-pink-500 p-s rounded-xxs text-button-mobil lg:text-button-desktop text-pink-100 text-center">Cancelation</a>
+        </div>
+        </div>
+        </div>
+    
+        
+  
+  <h1 class="h1 text-h1-mobil lg:text-h1-desktop lg:self-start font-primary text-midnight-500 lg:text-start text-center">Terms of service</h1>
+  
+  
+  <div class="tos-p-1 lg:w-1/2 flex flex-col gap-s">
+    <h2 id="generel" class="text-center lg:text-start  text-h2-mobil lg:text-h2-desktop text-pink-600">Generel terms</h2>
+  <p class="font-primary text-midnight-500 text-body-mobil lg:text-body-desktop">
+    For digital artworks, you will receive 2 versions of the illustration - one watermarked and one withoutwatermark.
+Water marked version: can be used freely with optional credit.
+non-watermarked version: personal use only, unless you want the commercial option which is +50% of the full price.
+<br><br>
+I have the right to post the commission on my socials and portfolio unless you want a private commission is +30% of the full <a class="text-pink-600 underline" href="#prices">price</a>.
+  </p>
+</div>
+
+
+<div class="tos-p-2 lg:w-1/2 flex flex-col gap-s">
+    <h2 id="refusal" class="text-center lg:text-start text-h2-mobil lg:text-h2-desktop text-pink-600">Refusal</h2>
+  <p class="font-primary text-midnight-500 text-body-mobil lg:text-body-desktop">
+    I have the right to decline anything that makes me uncomfortable or anything i deem i'm not capable of.
+<br><br>
+<span class="text-body-mobil lg:text-body-desktop font-primary text-pink-600">Immediate declines are:</span>
+<li class="font-primary text-midnight-500 text-body-mobil lg:text-body-desktop">Nudity</li>
+<li class="font-primary text-midnight-500 text-body-mobil lg:text-body-desktop">NSFW</li>
+<li class="font-primary text-midnight-500 text-body-mobil lg:text-body-desktop">Gore</li>
+ </p>
+</div>
+
+
+  
+<div class="tos-p-3 lg:w-1/2 flex flex-col gap-s">
+    <h2 id="payment" class="text-center lg:text-start  text-h2-mobil lg:text-h2-desktop text-pink-600">Payment</h2>
+  <p class="font-primary text-midnight-500 text-body-mobil lg:text-body-desktop">
+  <li class="font-primary text-midnight-500 text-body-mobil lg:text-body-desktop">  Payment (in DKK) via paypal</li>
+   <li class="font-primary text-midnight-500 text-body-mobil lg:text-body-desktop">Payment 100% upfront</li> 
+   <br>
+    
+   <span class="font-primary text-midnight-500 text-body-mobil lg:text-body-desktop"> No refunds after i have started the commission</span> </p>
+</div>
+
+
+
+<div class="tos-p-4 lg:w-1/2 flex flex-col gap-s">
+    <h2 id="process" class="text-center lg:text-start  text-h2-mobil lg:text-h2-desktop text-pink-600">Process and revision</h2>
+  <p class="font-primary text-midnight-500 text-body-mobil lg:text-body-desktop">
+    After I have revewed your request, I will dm you on Instagram where I might ask for more details. 
+<br><br>
+    After payment is received I will make a rough sketch which I will share with you and you can make unlimited changes from pose to composition.
+    <br><br>
+    Once I start the lineart and colors, small detail changes can be done. Major changes after that will be charged for. I decide the extra fee based on the specific situation.
+    <br><br>
+    I can refuse any changes I don’t wish to make.
+    <br><br>
+    I will update you on the commission every few days/weeks.
+    <br><br>
+    The final digital work will be sent as a PNG via email. 
+    Traditional works will be shipped to your prefered address.</p>
+</div>
+
+
+
+<div class="tos-p-5 lg:w-1/2 flex flex-col gap-s">
+    <h2 id="copyright" class="text-center lg:text-start  text-h2-mobil lg:text-h2-desktop text-pink-600">Copyright and usage policy</h2>
+  <p class="font-primary text-midnight-500 text-body-mobil lg:text-body-desktop">
+    I, the artist, reserve all rights to any produced artwork. i own the rights to: <br> <br>
+    <li class="font-primary text-midnight-500 text-body-mobil lg:text-body-desktop">Uploading your commission to any of my socials, portfolio and post speedpaints of it, or use as self-promotion (unless private commission).</li>
+    <br>
+  <li class="font-primary text-midnight-500 text-body-mobil lg:text-body-desktop">  Reuse the pose or composition of the artwork with some changes but not the character itself (for oc).</li>
+  <br>
+   <li class="font-primary text-midnight-500 text-body-mobil lg:text-body-desktop"> The client is allowed to use the piece for personal use ONLY unless specified otherwise in our contract. This includes posting to their own social media, printing the artwork for themselves, all as long as no monetary profit is earned from the artwork.</li>
+   <br>
+   <li class="font-primary text-midnight-500 text-body-mobil lg:text-body-desktop">The client is NOT allowed to reproduce, modify, or use the artwork in any way other than personal. This includes NFTs, prints, stickers,
+    merchandise, etc.</li> 
+    <br>
+   <li class="font-primary text-midnight-500 text-body-mobil lg:text-body-desktop"> The client is NOT allowed to resell or use my art for tracing and then claiming it as an original. Do not claim as your own.
+</li>
+<br>
+    
+
+    <span class="font-primary text-midnight-500 text-body-mobil lg:text-body-desktop"> Breaking any of these points will result in being banned from commissioning me ever again.</span> 
+</div>
+
+
+
+<div class="tos-p-6 lg:w-1/2 flex flex-col gap-s">
+    <h2 id="cancel" class="text-center lg:text-start  text-h2-mobil lg:text-h2-desktop text-pink-600">Cancelation policy/refunds</h2>
+  <p class="font-primary text-midnight-500 text-body-mobil lg:text-body-desktop">
+    A refund cannot be requested after I start the commission.
+    <br><br>
+
+    If i cannot complete the commission for any reason, I will offer a full refund or an alternative artwork.
+    <br><br>
+    Do not request a charge back; I am handling the refunds myself.
+    <br><br>
+    Requesting a chargeback after digital delivery via email will be declined, and your commission will be canceled. I will be obligated to share to paypal our conversation as proof that the commission was delivered and that TOS have been broken from your end.
+    <br><br>
+    You will also be <span class="text-pink-600">blacklisted</span> and <span class="text-pink-600">banned</span>  from ever commissioning me again, as well as publicly exposed to warn fellow artists.
+    <br><br>
+    Claiming dissatisfaction with the final work does not warrant a refund, as the client has multiple opportunities throughout the process to voice their concerns. 
+    Doing this will also result in being blacklisted.
+    
+    <br><br> <br><br>
+    
+    
+    If you agree to all of the above, you are now free to submit a request through Google Forms!
+</div>
+
+  
+   
+<a class="" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSd-qw0UbjwunVFY8vxSBvIfJwSbpq196CxcETLeBO1jo2Pysw/viewform?usp=dialog"> <Button input="Form" icon="/svg/icon-arrow-right.svg" variant="primaryCTA"></Button></a>
+  
+  
+  
+  
+    </section>
+  </section>
+
+
+    
+    
+
+
+
+
+
+
+
+</MainLayout>
+
+
+<style>
+/* Hide scrollbar in Webkit browsers (Chrome, Safari, Edge) */
+#works-preview .flex {
+  overflow-x: auto;
+  scrollbar-width: none; /* Firefox */
+}
+
+#works-preview .flex::-webkit-scrollbar {
+  display: none; /* Webkit browsers */
+}
+
+
+	html{
+		scroll-behavior: smooth;
+       
+	}
+
+
+  
+  
+	</style>
+
+
+
+<script>
+
+
+
+import gsap from "gsap";
+ 
+ import { ScrollTrigger } from "gsap/ScrollTrigger";
+ 
+ gsap.registerPlugin(ScrollTrigger);
+
+ gsap.to(".bounce", {
+    y: -10,  delay: 0.8, ease: "power1.out", duration: 1, repeat: -1, yoyo: true,
+});
+
+gsap.to(".star", {
+  scale: 1.2,
+  opacity: 1, 
+  duration: 0.8, 
+  ease: "power1.inOut", 
+  repeat: -1, 
+  yoyo: true,
+  stagger: 0.1 
+});
+
+
+gsap.to(".star-7", {
+    scale: 1.2,
+  opacity: 1,
+  duration: 40, 
+  ease: "power1.inOut",
+  repeat: -1, 
+  yoyo: true, 
+  stagger: 0.1,
+  rotation: 360,
+});
+
+
+
+
+gsap.from(".fade-in",{
+opacity:0,
+duration:3,
+ease:"power1.inOut"
+
+
+});
+
+
+
+gsap.from("#subhero .h1, #subhero a, #subhero p", {
+  scrollTrigger: {
+    trigger: "#subhero",
+    start: "top 40%", 
+    scrub: false, // Animation will not be tied to scroll progress
+  },
+  opacity: 0,
+  x:10,
+  
+  duration: 1,
+  ease: "power2.out",
+  stagger: 0.3, // Stagger the animation of each element by 0.1 seconds
+});
+
+
+gsap.from("#howto .h1, #howto .wrapper,  #howto a, #howto article", {
+  scrollTrigger: {
+    trigger: "#howto",
+    start: "top 40%", 
+    scrub: false, // Animation will not be tied to scroll progress
+  },
+  opacity: 0,
+  x:-10,
+  
+  duration: 1,
+  ease: "power2.out",
+  stagger: 0.3, // Stagger the animation of each element by 0.1 seconds
+});
+
+
+
+
+
+
+gsap.from("#prices .h1, #prices .article-1", {
+  scrollTrigger: {
+    trigger: "#prices",
+    start: "top 70%", 
+    scrub: false, 
+  },
+  opacity: 0,
+  x:10,
+  
+  duration: 1,
+  ease: "power2.out",
+  stagger: 0.3, 
+});
+
+
+gsap.from("#prices .h2-digital, #prices .article-2, #prices .article-3", {
+  scrollTrigger: {
+    trigger: "#prices .h2-digital",
+    start: "top 70%", 
+    scrub: false, 
+  },
+  opacity: 0,
+  x:10,
+  
+  duration: 1,
+  ease: "power2.out",
+  stagger: 0.3, 
+});
+
+
+
+gsap.from("#prices .h2-paper, #prices .article-4", {
+  scrollTrigger: {
+    trigger: "#prices .h2-paper",
+    start: "top 70%", 
+    scrub: false, 
+  },
+  opacity: 0,
+  x:10,
+  
+  duration: 1,
+  ease: "power2.out",
+  stagger: 0.3, 
+});
+
+
+gsap.from("#prices .h2-canvas, #prices .article-5", {
+  scrollTrigger: {
+    trigger: "#prices .h2-canvas",
+    start: "top 70%", 
+    scrub: false, 
+  },
+  opacity: 0,
+  x:10,
+  
+  duration: 1,
+  ease: "power2.out",
+  stagger: 0.3, 
+});
+
+
+gsap.from("#prices a", {
+  scrollTrigger: {
+    trigger: "#prices a",
+    start: "top 70%", 
+    scrub: false, 
+  },
+  opacity: 0,
+  x:10,
+  
+  duration: 1,
+  ease: "power2.out",
+  stagger: 0.3, 
+});
+   
+
+
+
+
+gsap.to(".card-1, .card-3",  {
+      scale: 1.01,
+      y:5,
+      duration: 1.5,
+      repeat: -1, // Infinite repetition
+      yoyo: true, // Reverse animation each time
+      ease: "power2.inOut", // Smooth ease
+    });
+  
+      
+ 
+
+    gsap.from("#tos .tos-buttons", {
+  scrollTrigger: {
+    trigger: ".tos-p-1 ",
+    start: "top 70%", 
+    scrub: false, 
+  },
+  opacity: 0,
+  x:10,
+  
+  duration: 1,
+  ease: "power2.out",
+ 
+});
+
+
+
+</script>
+
+

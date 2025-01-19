@@ -3,14 +3,14 @@ const { variant = "primary", input, icon } = Astro.props;
 
 // gælder for alle //
 const buttonStyling =
-  " transition-all duration-300 text-button-mobil lg:text-button-desktop lg:min-w-[160px] ease-in-out py-[16px] px-[36px] lg:py-[14px] lg:px-xxs border rounded-xxs font-primary whitespace-nowrap  ";
+  " transition-all duration-300 text-button-mobil hover:scale-[99%] lg:text-button-desktop lg:min-w-[160px] ease-in-out py-[16px] px-[36px] lg:py-[14px] lg:px-sm border rounded-xxs font-primary whitespace-nowrap  ";
 
 const variantClasses = {
   primaryDefault:
     "border-midnight-500 hover:bg-pink-600 text-midnight-500 ",
 
   primaryCTA:
-    "button-pulsate border-midnight-500 text-midnight-500 hover:bg-midnight-500 bg-pink-600",
+    "button-pulsate border-midnight-500 text-midnight-500 hover:bg-transparent bg-pink-600",
 
   secondaryDefault:
     "border-pink-100 text-pink-100 hover:bg-pink-600 ",

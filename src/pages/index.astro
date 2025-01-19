@@ -5,30 +5,64 @@ import Link from '../components/Link.astro';
 import { Image } from 'astro:assets';
 import thumbsup from "../assets/images/thumbsup.png";
 import Quote from "../components/Quote.astro";
+import Carrousel from "../components/Carrousel.astro";
+import Card from "../components/Card.astro";
 ---
 <MainLayout title="Exiong Art Portfolio">
 	
 
 
-<section id="hero">
+<section id="hero" class="overflow-x-hidden overflow-hidden relative">
 
 <section id="hero-d" class=" h-screen  flex flex-col items-center justify-center mx-margin-mobil lg:mx-margin-desktop ">
 
-  <div class="z-0">
-    <img src="/svg/4-star.svg" class="star absolute w-4 left-2" alt="">
-    <img src="/svg/7-star.svg" class="star-7 absolute w-12 left-32" alt="">
-    <img src="/svg/dot.svg" class="star absolute w-2 right-2" alt="">
+  <div class="z-0 lg:hidden">
+    <img src="/svg/4-star.svg" class="hidden star absolute w-4 left-2" alt="Star">
+    
+    <img src="/svg/dots.svg" class=" absolute w-20 right-[2%] top-[16%]" alt="Tiny stars">
+    <img src="/svg/dots.svg" class=" absolute w-20 left-0  top-[35%]" alt="Tiny stars">
+    <img src="/svg/dots.svg" class=" absolute w-20 left-10  top-[55%]" alt="Tiny stars">
+    <img src="/svg/dots.svg" class=" absolute w-20 right-0  top-[65%]" alt="Tiny stars">
+
+    <img src="/svg/dots.svg" class=" absolute w-20 left-[30%]  top-[75%]" alt="Tiny stars">
+ 
+    
   </div>
 
-<div class="hidden lg:block">
-  <img src="/svg/cloud-r-crop.svg" class=" cloud-right absolute -bottom-0 -right-[24rem] w-4/5" alt="CLoud">
-  <img src="/svg/cloud-l-crop.svg" class="cloud-left absolute -bottom-0 -left-[24rem]  w-4/5" alt="CLoud">
+
+
+  <div class="z-0 lg:block hidden">
+    <img src="/svg/4-star.svg" class="top-[15%] star absolute  w-7 left-[70%]" alt="Star">
+    <img src="/svg/4-star.svg" class="top-[19%] star absolute  w-7 left-[20%]" alt="Star">
+    <img src="/svg/dots.svg" class="top-[30%]  absolute  w-40 left-[20%]" alt="Tiny stars">
+    <img src="/svg/dots.svg" class="top-[4%]  absolute  w-40 left-[34%]" alt="Tiny stars">
+    <img src="/svg/dots.svg" class="top-[10%]  absolute  w-40 left-[54%]" alt="Tiny stars">
+    <img src="/svg/dots.svg" class="top-[50%]  absolute  w-40 left-[70%]" alt="Tiny stars">
+    <img src="/svg/dots.svg" class="top-[70%]  absolute  w-40 right-[54%]" alt="Tiny stars">
+    <img src="/svg/dots.svg" class=" absolute w-40 left-[2%] top-[16%]" alt="Tiny stars">
+    <img src="/svg/7-star.svg" class="top-[38%] star-7 absolute  w-20 left-[10%]" alt="Big star">
+    <img src="/svg/7-star.svg" class="top-[38%] star-7 absolute  w-20 right-[10%]" alt="Big star">
+    <img src="/svg/dots.svg" class=" absolute w-40 left-[2%] top-[16%]" alt="Tiny stars">
+    
+    <img src="/svg/dots.svg" class=" absolute w-40 right-[2%] top-[16%]" alt="Tiny stars">
+    
+
+   
+ 
+    
+  </div>
+
+
+
+<div class="hidden overflow-x-hidden cloud lg:block">
+  <img src="/svg/cloud-r-crop.svg" class="overflow-x-hidden cloud cloud-right absolute -bottom-0 -right-[24rem] w-4/5" alt="CLoud">
+  <img src="/svg/cloud-l-crop.svg" class="overflow-x-hidden cloud cloud-left absolute -bottom-0 -left-[24rem]  w-4/5" alt="CLoud">
 </div>
 
 
-<div class=" lg:hidden">
-  <img src="/svg/cloud-r-crop.svg" class=" cloud-right absolute -bottom-0 -right-[9%] w-[400px] max-w-none" alt="CLoud">
-  <img src="/svg/cloud-l-crop.svg" class="	 cloud-left absolute top-10 -left-[9%]  w-[400px]" alt="CLoud">
+<div class=" lg:hidden overflow-x-hidden cloud ">
+  <img src="/svg/cloud-r-crop.svg" class="overflow-x-hidden cloud cloud-right absolute -bottom-0 -right-[9%] w-[400px] max-w-none" alt="CLoud">
+  <img src="/svg/cloud-l-crop.svg" class="overflow-x-hidden cloud	 cloud-left absolute top-10 -left-[9%]  w-[400px]" alt="CLoud">
 </div>
 
 
@@ -47,9 +81,52 @@ import Quote from "../components/Quote.astro";
 
 
 
-<section id="about-preview" class="bg-pink-100 h-screen">
+<section id="about-preview" class="overflow-x-hidden bg-pink-100 ">
 
-  <section id="about-preview-m ">
+
+  
+  <section id="about-preview-m" class="lg:hidden px-l pb-l pt-m flex flex-col items-center gap-l justify-center">
+
+    <div class="flex flex-col items-center gap-m justify-center">
+
+<h1 class="text-h1-mobil font-primary text-midnight-500 text-center">Welcome <span class="exclaim text-pink-600 inline-block font-mono font-extrabold text-h1-desktop">!</span></h1>
+
+<img class="w-[170px] h-[170px] object-cover rounded-[9999px]" src="/img/2025/digital/lana.JPG" alt="Self portrait">
+
+<p class="text-midnight-500 font-primary text-body-mobil">and thank you for visiting my website! This site is designed and developed by myself, including all graphic elements, and it  is a glimpse into my creative world where I showcase my artwork, share commission details, and tell you a bit about myself as an artist. Here, you can explore my portfolio, learn about my creative process, and find out how to get in touch. Whether you're here to commission a piece or just to enjoy some art, I hope you find something that inspires you.</p>
+
+    </div>
+
+    <a href="/about"><Button variant="primaryDefault" input="Read more" icon="/svg/icon-arrow-right.svg"></Button></a>
+
+
+  </section>
+
+
+
+
+  <section id="about-preview-d" class="hidden lg:grid grid-cols-grid-desktop gap-gap-desktop ml-margin-desktop">
+
+
+  
+
+<div class="flex flex-col gap-xl justify-start py-l col-start-1 col-span-6 ">
+
+  <div class="flex flex-col gap-s">
+  <div class="flex gap-s items-center justify-start">
+  <h1 class=" text-h1-desktop font-primary text-midnight-500 text-start">Welcome </h1>
+  <h1 class="exclaim text-pink-600 inline-block font-mono font-extrabold text-[80px]">!</h1>
+</div>
+
+<p class="font-primary text-midnight-500 text-body-desktop">and thank you for visiting my website! <br> This site is designed and developed by myself, including all graphic elements, and it is a glimpse into my creative world where I showcase my artwork, share commission details, and tell you a bit about myself as an artist. <br>Here, you can explore my portfolio, learn about my creative process, and find out how to get in touch. <br> <br> Whether you're here to commission a piece or just to enjoy some art, I hope you find something that inspires you.</p>
+
+</div>
+
+<a href="/about"><Button variant="primaryDefault" input="Read more" icon="/svg/icon-arrow-right.svg"></Button></a>
+</div>
+
+
+<img class="col-start-8 col-span-full row-start-1 row-span-full object-cover w-full h-full " src="/img/2025/digital/lana.JPG" alt="Self portrait">
 
 
   </section>
@@ -60,11 +137,265 @@ import Quote from "../components/Quote.astro";
 
 
 
+<section id="works-preview" class="flex flex-col items-center  lg:mx-margin-desktop gap-l justify-center py-m">
+
+  <div class="z-0 lg:hidden">
+    <img src="/svg/4-star.svg" class=" star absolute right-[50%] w-4  top-[275%]" alt="Star">
+    <img src="/svg/7-star.svg" class="star-7 absolute w-12 left-[15%] top-[250%]" alt="Big star">
+   
+    <img src="/svg/dots.svg" class=" absolute w-20 right-10  top-[245%]" alt="Tiny stars">
+    <img src="/svg/dots.svg" class=" absolute w-20 right-10  top-[260%]" alt="Tiny stars">
+    <img src="/svg/dots.svg" class=" absolute w-20 left-10  top-[260%]" alt="Tiny stars">
+    <img src="/svg/dots.svg" class=" absolute w-20 left-10  top-[280%]" alt="Tiny stars">
+    <img src="/svg/dots.svg" class=" absolute w-20 left-0  top-[300%]" alt="Tiny stars">
+    <img src="/svg/dots.svg" class=" absolute w-20 right-[2%] top-[320%]" alt="Tiny stars">
+    <img src="/svg/dots.svg" class=" absolute w-20 left-10  top-[367%]" alt="Tiny stars">
+    <img src="/svg/dots.svg" class=" absolute w-20 left-[60%]  top-[370%]" alt="Tiny stars">
+    <img src="/svg/7-star.svg" class="star-7 absolute w-12 right-[6%] top-[380%]" alt="Big star">
+    
+    
+
+    <img src="/svg/dots.svg" class=" absolute w-20 left-[30%]  top-[75%]" alt="Tiny stars">
+    <img src="/svg/7-star.svg" class="star-7 absolute w-12 left-[15%] top-[80%]" alt="Big star">
+    
+  </div>
+
+
+
+  <div class="z-0 lg:block hidden">
+    <img src="/svg/4-star.svg" class="top-[205%] star absolute  w-7 left-[70%]" alt="Star">
+    <img src="/svg/4-star.svg" class="top-[209%] star absolute  w-7 left-[20%]" alt="Star">
+
+
+ 
+    <img src="/svg/dots.svg" class="top-[300%]  absolute  w-40 right-[20%]" alt="Tiny stars">
+    <img src="/svg/dots.svg" class="top-[280%]  absolute  w-40 right-[4%]" alt="Tiny stars">
+    <img src="/svg/4-star.svg" class="top-[305%] star absolute  w-7 left-[10%]" alt="Star">
+    <img src="/svg/dots.svg" class=" absolute w-40 left-[2%] top-[216%]" alt="Tiny stars">
+    <img src="/svg/7-star.svg" class="top-[238%] star-7 absolute  w-20 left-[0%]" alt="Big star">
+    <img src="/svg/7-star.svg" class="top-[238%] star-7 absolute  w-20 right-[2%]" alt="Big star">
+    <img src="/svg/dots.svg" class=" absolute w-40 left-[2%] top-[216%]" alt="Tiny stars">
+    
+    <img src="/svg/dots.svg" class=" absolute w-40 right-[2%] top-[216%]" alt="Tiny stars">
+    
+
+   
+ 
+    
+  </div>
+
+
+
+  <h1 class="h1 font-primary text-h1-mobil lg:text-h1-desktop text-pink-100">Works</h1>
+
+  <div id="gallery" class="card-1 z-40 grid overflow-x-scroll grid-cols-1 flex flex-row lg:grid-cols-3 gap-m"></div>
+
+  <a href="/gallery">
+    <Button input="View all" icon="/svg/icon-arrow-right-light.svg" variant="secondaryCTA"></Button>
+  </a>
+</section>
+
+<script type="module">
+  const url = "https://xkkjpixvvpitmnhdffgm.supabase.co/rest/v1/art_works";
+  const apikey =
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhra2pwaXh2dnBpdG1uaGRmZmdtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzcyMTg5NjMsImV4cCI6MjA1Mjc5NDk2M30.EMGeY2w0_Jh6UgreM32qNBTBOuA9R02HfO1QwZRX7CI";
+
+  const gallery = document.getElementById("gallery");
+
+  // Fetch the 3 latest artworks from Supabase
+  async function fetchLatestArtworks() {
+    const response = await fetch(`${url}?select=*&order=created_at.desc&limit=3`, {
+      method: "GET",
+      headers: { apikey },
+    });
+
+    if (!response.ok) {
+      console.error("Error fetching artworks:", response.statusText);
+      return [];
+    }
+
+    return await response.json();
+  }
+
+  // Render the latest artworks to the DOM
+  async function renderLatestArtworks() {
+    const artworks = await fetchLatestArtworks();
+
+    gallery.innerHTML = ""; // Clear the gallery
+
+    if (artworks.length === 0) {
+      gallery.innerHTML =
+        "<p class='text-center text-pink-100 text-body-mobil lg:text-body-desktop'>No artworks found.</p>";
+      return;
+    }
+
+    artworks.forEach((artwork) => {
+      const card = document.createElement("div");
+      card.innerHTML = `
+        <div class="bg-gradient-to-b lg:h-[500px]  z-[100] card-1 lg:w-[400px] w-[300px] from-gold-800 to-gold-200 p-xs">
+          <article
+            class="bg-cover bg-no-repeat group"
+            style="background-image: url(${artwork.image});"
+          >
+            <div class=" h-[493px]  bg-midnight-500 group-hover:bg-none p-sm flex flex-col justify-between opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div class="flex flex-col gap-m items-center">
+                <h1 class="text-center text-pink-100 font-primary text-h1-mobil">
+                  ${artwork.title}
+                </h1>
+                <p class="self-start text-pink-100 font-primary text-body-mobil overflow-y-auto max-h-[300px]">
+                  ${artwork.description} <br><br>
+                </p>
+                <p class="self-start text-pink-20 font-primary text-body-mobil overflow-y-auto max-h-[280px]">
+                  Details: <br>
+                  ${artwork.size} <br>
+                  ${artwork.materials}
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+      `;
+      gallery.appendChild(card);
+
+  // Animate the card after it is added to the DOM
+
+
+    });
+  }
+
+  // Initial fetch on page load
+  document.addEventListener("DOMContentLoaded", renderLatestArtworks);
+</script>
+
+
+
+<section id="commissions-preview" class="py-m overflow-x-hidden px-margin-mobil lg:px-margin-desktop">
+
+
+  
+  <div class="z-0 lg:hidden">
+    <img src="/svg/4-star.svg" class=" star absolute right-[2%] w-4  top-[495%]" alt="Star">
+    <img src="/svg/4-star.svg" class=" star absolute left-[2%] w-9  top-[535%]" alt="Star">
+    <img src="/svg/7-star.svg" class="star-7 absolute w-12 right-[0%] top-[450%]" alt="Big star">
+   
+    <img src="/svg/dots.svg" class=" absolute w-20 right-0  top-[545%]" alt="Tiny stars">
+    <img src="/svg/dots.svg" class=" absolute w-20 right-10  top-[560%]" alt="Tiny stars">
+    <img src="/svg/dots.svg" class=" absolute w-20 left-0  top-[490%]" alt="Tiny stars">
+    <img src="/svg/dots.svg" class=" absolute w-20 left-[50%]  top-[520%]" alt="Tiny stars">
+    <img src="/svg/dots.svg" class=" absolute w-20 left-0  top-[450%]" alt="Tiny stars">
+    <img src="/svg/dots.svg" class=" absolute w-20 left-0  top-[550%]" alt="Tiny stars">
+    <img src="/svg/dots.svg" class=" absolute w-20 left-0  top-[580%]" alt="Tiny stars">
+    <img src="/svg/dots.svg" class=" absolute w-20 left-0  top-[510%]" alt="Tiny stars">
+    <img src="/svg/dots.svg" class=" absolute w-20 right-0  top-[510%]" alt="Tiny stars">
+    <img src="/svg/dots.svg" class=" absolute w-20 right-[2%] top-[420%]" alt="Tiny stars">
+    <img src="/svg/dots.svg" class=" absolute w-20 right-[2%] top-[400%]" alt="Tiny stars">
+    <img src="/svg/dots.svg" class=" absolute w-20 left-[2%] top-[410%]" alt="Tiny stars">
+    <img src="/svg/dots.svg" class=" absolute w-20 left-10  top-[467%]" alt="Tiny stars">
+    <img src="/svg/dots.svg" class=" absolute w-20 left-[60%]  top-[470%]" alt="Tiny stars">
+    <img src="/svg/7-star.svg" class="star-7 absolute w-12 left-[6%] top-[480%]" alt="Big star">
+    
+    
+
+    <img src="/svg/dots.svg" class=" absolute w-20 left-[30%]  top-[75%]" alt="Tiny stars">
+    <img src="/svg/7-star.svg" class="star-7 absolute w-12 left-[15%] top-[80%]" alt="Big star">
+    
+  </div>
+
+
+
+  <div class="z-0 lg:block hidden">
+    <img src="/svg/4-star.svg" class="top-[355%] star absolute  w-7 left-[70%]" alt="Star">
+    <img src="/svg/4-star.svg" class="top-[399%] star absolute  w-7 left-[20%]" alt="Star">
+    <img src="/svg/dots.svg" class="top-[400%]  absolute  w-40 left-[20%]" alt="Tiny stars">
+    <img src="/svg/dots.svg" class="top-[334%]  absolute  w-40 left-[34%]" alt="Tiny stars">
+    <img src="/svg/dots.svg" class="top-[360%]  absolute  w-40 left-[54%]" alt="Tiny stars">
+    <img src="/svg/dots.svg" class="top-[320%]  absolute  w-40 left-[5%]" alt="Tiny stars">
+    <img src="/svg/dots.svg" class="top-[390%]  absolute  w-40 right-[54%]" alt="Tiny stars">
+    <img src="/svg/dots.svg" class="top-[350%]  absolute  w-40 right-[20%]" alt="Tiny stars">
+    <img src="/svg/dots.svg" class="top-[380%]  absolute  w-40 right-[4%]" alt="Tiny stars">
+    <img src="/svg/4-star.svg" class="top-[415%] star absolute  w-7 right-[50%]" alt="Star">
+    <img src="/svg/dots.svg" class=" absolute w-40 left-[2%] top-[216%]" alt="Tiny stars">
+   
+    <img src="/svg/7-star.svg" class="top-[358%] star-7 absolute  w-20 right-[10%]" alt="Big star">
+    <img src="/svg/dots.svg" class=" absolute w-40 left-[50%] top-[416%]" alt="Tiny stars">
+    
+    <img src="/svg/dots.svg" class=" absolute w-40 right-[2%] top-[416%]" alt="Tiny stars">
+    
+
+   
+ 
+    
+  </div>
+
+
+
+<div class="gap-l  mx-margin-mobil lg:m-margin-desktop flex  flex-col items-center justify-center lg:items-start">
+
+  <div class="h1">
+<h1 class=" font-primary text-h1-mobil lg:text-h1-desktop text-pink-100">Commissions</h1>
+<h2 class="font-primary text-button-mobil lg:text-button-desktop text-pink-100">Bring your ideas to life</h2>
+</div>
+
+
+
+<div class="flex gap-m lg:gap-l lg:flex-row flex-col lg:h-[400px]">
+
+
+  <article class="card-1 flex flex-col gap-s p-m border border-pink-100 h-[300px] lg:h-[300px] lg:w-[400px] ">
+    <h2 class="font-primary text-pink-100 text-h2-mobil lg:text-h2-desktop ">1: Submit a request</h2>
+    <p class="text-pink-100 font-primary text-body-mobil lg:text-body-desktop">Fill out the commission form with your name, email, Instagram and details about your request.</p>
+  </article>
+
+
+  <article class="card-1 flex flex-col gap-s p-m border border-pink-100 lg:relative lg:top-20 h-[300px] lg:h-[300px] lg:w-[400px]">
+    <h2 class="font-primary text-pink-100 text-h2-mobil lg:text-h2-desktop  whitespace-nowrap">2: I contact you</h2>
+    <p class="text-pink-100 font-primary text-body-mobil lg:text-body-desktop">I will review your request and contact you via Instagram DMs.</p>
+  </article>
+
+
+  <article class="card-1 flex flex-col gap-s p-m border border-pink-100 col lg:relative lg:top-40 h-[300px] lg:h-[300px] lg:w-[400px]">
+    <h2 class="font-primary text-pink-100 text-h2-mobil lg:text-h2-desktop ">3: That's it</h2>
+    <p class="text-pink-100 font-primary text-body-mobil lg:text-body-desktop">And then we'll take it from there. <br> <br>
+
+      For more information about the process, read the <a href="/commissions#tos" class="underline text-pink-600">terms of service</a>.</p>
+  </article>
+
+
+</div>
+
+
+<a href="/commissions"> <Button input="Read more" icon="/svg/icon-arrow-right-light.svg" variant="secondaryCTA"></Button></a>
+
+</div>
+
+</section>
+
+
+
 
 
 
 </MainLayout>
 
+
+<style>
+/* Hide scrollbar in Webkit browsers (Chrome, Safari, Edge) */
+#works-preview .flex {
+  overflow-x: auto;
+  scrollbar-width: none; /* Firefox */
+}
+
+#works-preview .flex::-webkit-scrollbar {
+  display: none; /* Webkit browsers */
+}
+
+
+	html{
+		scroll-behavior: smooth;
+	}
+	
+  
+	</style>
 
 
 
@@ -80,7 +411,6 @@ import gsap from "gsap";
 
 
 
-gsap.to(".e", {scrollTrigger:{trigger: "#hero-d, #hero-m", start: "bottom 100%", scrub: true}, scale:4.2, opacity: 0, x: -40, delay: 0,  stagger: 0.06, ease: "power2.out", duration: 1.1,})
 gsap.to(".star", {
   scale: 1.2,
   opacity: 1, 
@@ -154,9 +484,84 @@ ease:"power1.inOut"
 
 });
 
+gsap.to(".exclaim", {
+    rotation: 10, // Rotate 10 degrees
+    duration: 1, // Time for one rotation
+    ease: "power1.inOut", // Smooth in-out easing
+    yoyo: true, // Reverse back to the original rotation
+    repeat: -1 // Infinite repetition
+  });
+
+
+ gsap.from("#about-preview h1, #about-preview img, #about-preview p, #about-preview a", {
+  scrollTrigger: {
+    trigger: "#about-preview",
+    start: "top 90%", 
+    scrub: false, // Animation will not be tied to scroll progress
+  },
+  opacity: 0,
+  x:-10,
+  duration: 1,
+  ease: "power2.out",
+  stagger: 0.1, // Stagger the animation of each element by 0.1 seconds
+});
+
+
+gsap.from("#works-preview .h1, #works-preview .wrapper, .card-1,  #works-preview a", {
+  scrollTrigger: {
+    trigger: "#works-preview",
+    start: "top 90%", 
+    scrub: false, // Animation will not be tied to scroll progress
+  },
+  opacity: 0,
+  x:10,
+  
+  duration: 1,
+  ease: "power2.out",
+  stagger: 0.3, // Stagger the animation of each element by 0.1 seconds
+});
 
 
 
+
+
+
+  // Make sure GSAP is loaded before running this code.
+  
+    gsap.to(".card-1, .card-3",  {
+      scale: 1.01,
+      y:5,
+      duration: 1.5,
+      repeat: -1, // Infinite repetition
+      yoyo: true, // Reverse animation each time
+      ease: "power2.inOut", // Smooth ease
+    });
+  
+      
+    gsap.to(" .card-2",  {
+      scale: 1.01,
+      y:-5,
+      duration: 1.5,
+      repeat: -1, // Infinite repetition
+      yoyo: true, // Reverse animation each time
+      ease: "power2.inOut", // Smooth ease
+    });
+  
+
+    gsap.from("#commissions-preview .h1, #commissions-preview .wrapper,  #commissions-preview a", {
+  scrollTrigger: {
+    trigger: "#commissions-preview",
+    start: "top 40%", 
+    scrub: false, // Animation will not be tied to scroll progress
+  },
+  opacity: 0,
+  x:-40,
+  
+  duration: 1,
+  ease: "power2.out",
+  stagger: 0.3, // Stagger the animation of each element by 0.1 seconds
+});
+   
 
 </script>
 

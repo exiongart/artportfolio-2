@@ -1,0 +1,103 @@
+---
+import Card from "./Card.astro";
+---
+
+<div class="relative lg:hidden overflow-auto w-full flex flex-col items-center justify-center">
+  <!-- Carousel container for horizontal scrolling -->
+  <div
+    id="carousel"
+    class="flex flex-row gap-xl  scroll-smooth snap-x snap-center py-8 px-[16px] sm:px-[40px]"
+  >
+    <!-- Cards -->
+    <div class="snap-center w-full">
+      
+        <Card
+          title={`Rome Skyline`}
+          text="Lorecdchwosuchsdcsacbsdczaxad cnsjss sssssssss sssssssssssssss ssss ssssss ssssssss sssssssss ssss sskm"
+          bgImg="/img/2025/maleri/louise.jpg"
+          materials="acrylic on canvas"
+          size="30 x 30 cm"
+        />
+      
+    </div>
+
+
+    <div class="snap-center w-full">
+      
+        <Card
+          title={`Rome Skyline`}
+          text="Lorecdchwosuchsdcsacbsdczaxad cnsjss sssssssss sssssssssssssss ssss ssssss ssssssss sssssssss ssss sskm"
+          bgImg="/img/2025/maleri/louise.jpg"
+          materials="acrylic on canvas"
+          size="30 x 30 cm"
+        />
+      
+    </div>
+
+
+    <div class="snap-center w-full">
+      
+        <Card
+          title={`Rome Skyline`}
+          text="Lorecdchwosuchsdcsacbsdczaxad cnsjss sssssssss sssssssssssssss ssss ssssss ssssssss sssssssss ssss sskm"
+          bgImg="/img/2025/maleri/louise.jpg"
+          materials="acrylic on canvas"
+          size="30 x 30 cm"
+        />
+      
+    </div>
+
+    <div class="snap-center w-full">
+      
+        <Card
+          title={`Rome Skyline`}
+          text="Lorecdchwosuchsdcsacbsdczaxad cnsjss sssssssss sssssssssssssss ssss ssssss ssssssss sssssssss ssss sskm"
+          bgImg="/img/2025/maleri/louise.jpg"
+          materials="acrylic on canvas"
+          size="30 x 30 cm"
+        />
+      
+    </div>
+
+
+    
+
+   
+
+   
+    <!-- Repeat for more cards -->
+  </div>
+
+  <!-- Navigation buttons -->
+ 
+</div>
+
+
+
+<style>
+
+#carousel {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none;    /* Firefox */
+}
+
+#carousel::-webkit-scrollbar {
+    display: none;           /* Webkit browsers */
+}
+
+  #carousel {
+    scrollbar-width: none;
+    overflow-x:scroll;
+  }
+
+  #carousel::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Edge */
+  }
+
+  /* Centering fix */
+  .snap-center {
+    scroll-snap-align: center;
+  }
+</style>

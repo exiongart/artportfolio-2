@@ -14,3 +14,14 @@
     font-weight: 300; /* Light weight */
     font-style: normal;
   }
+
+  /* Ændrer farven på den markerede tekst */
+::selection {
+    background-color: #EC97C099; 
+    
+    color: white; /* Hvid tekst */
+  }
+  
+
+ 
+  

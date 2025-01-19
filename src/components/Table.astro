@@ -1,0 +1,28 @@
+---
+const { variant = "header", input } = Astro.props;
+
+// gælder for alle //
+const tableStyling =
+  " text-table-mobil z-[100]  lg:text-table-desktop  w-[90px] lg:w-[300px] lg:h-[100px]  font-primary whitespace-nowrap  ";
+
+const variantClasses = {
+  header:
+    "bg-pink-100  text-midnight-500 ",
+
+  body:
+    "text-pink-100  bg-midnight-200",
+
+ 
+};
+---
+
+<div
+  class="tableComponent flex flex-row items-center justify-center lg:gap-sm gap-[16px]"
+  class:list={[tableStyling, variantClasses[variant]]}
+>
+  <div class="">{input}</div>
+  
+
+</div>
+
+

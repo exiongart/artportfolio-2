@@ -1,0 +1,399 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Button from '../components/Button.astro';
+import Link from '../components/Link.astro';
+import { Image } from 'astro:assets';
+import thumbsup from "../assets/images/thumbsup.png";
+import Quote from "../components/Quote.astro";
+import Carrousel from "../components/Carrousel.astro";
+import Card from "../components/Card.astro";
+---
+<MainLayout title="Exiong Art Portfolio">
+	
+
+
+<section id="hero" class="overflow-x-hidden overflow-hidden relative">
+
+<section id="hero-d" class=" h-screen  flex flex-col items-center justify-center mx-margin-mobil lg:mx-margin-desktop ">
+
+  <div class="z-0 lg:hidden">
+    <img src="/svg/4-star.svg" class=" star absolute w-7 left-2" alt="Star">
+    <img src="/svg/7-star.svg" class="top-[68%] star-7 absolute  w-10 right-[10%]" alt="Big star">
+    
+    <img src="/svg/dots.svg" class=" absolute w-20 right-[2%] top-[16%]" alt="Tiny stars">
+    <img src="/svg/dots.svg" class=" absolute w-20 left-0  top-[35%]" alt="Tiny stars">
+    <img src="/svg/dots.svg" class=" absolute w-20 left-10  top-[55%]" alt="Tiny stars">
+    <img src="/svg/dots.svg" class=" absolute w-20 right-[40%]  top-[5%]" alt="Tiny stars">
+
+    <img src="/svg/dots.svg" class=" absolute w-20 left-[30%]  top-[75%]" alt="Tiny stars">
+ 
+    
+  </div>
+
+
+
+  <div class="z-0 lg:block hidden">
+    <img src="/svg/4-star.svg" class="top-[15%] star absolute  w-7 left-[70%]" alt="Star">
+    <img src="/svg/4-star.svg" class="top-[19%] star absolute  w-7 left-[20%]" alt="Star">
+    <img src="/svg/dots.svg" class="top-[30%]  absolute  w-40 left-[20%]" alt="Tiny stars">
+    <img src="/svg/dots.svg" class="top-[4%]  absolute  w-40 left-[34%]" alt="Tiny stars">
+    <img src="/svg/dots.svg" class="top-[10%]  absolute  w-40 left-[54%]" alt="Tiny stars">
+    <img src="/svg/dots.svg" class="top-[50%]  absolute  w-40 left-[70%]" alt="Tiny stars">
+    <img src="/svg/dots.svg" class="top-[70%]  absolute  w-40 right-[54%]" alt="Tiny stars">
+    <img src="/svg/dots.svg" class="top-[80%]  absolute  w-40 right-[74%]" alt="Tiny stars">
+    <img src="/svg/dots.svg" class=" absolute w-40 left-[2%] top-[16%]" alt="Tiny stars">
+    <img src="/svg/7-star.svg" class="top-[38%] star-7 absolute  w-20 left-[10%]" alt="Big star">
+    <img src="/svg/7-star.svg" class="top-[68%] star-7 absolute  w-10 right-[10%]" alt="Big star">
+    <img src="/svg/7-star.svg" class="top-[68%] star-7 absolute  w-10 left-[10%]" alt="Big star">
+    <img src="/svg/7-star.svg" class="top-[38%] star-7 absolute  w-20 right-[10%]" alt="Big star">
+    <img src="/svg/dots.svg" class=" absolute w-40 left-[2%] top-[16%]" alt="Tiny stars">
+    
+    <img src="/svg/dots.svg" class=" absolute w-40 right-[2%] top-[16%]" alt="Tiny stars">
+    
+
+   
+ 
+    
+  </div>
+
+
+
+
+
+
+<div class="flex flex-col items-center justify-center gap-xxl">
+    <div class="fade-in">
+    <Quote class="" quote="Art washes away from the soul the dust of everyday life." author="Pablo Picasso"></Quote>
+
+  </div>
+
+<div class=" bounce flex flex-row gap-s opacity-50">
+  <p class="font-primary text-body-mobil lg:text-body-desktop text-pink-100 text-center">Explore the gallery</p>
+  <img class="w-4" src="/svg/icon-arrow-down-light.svg" alt="Arrow">
+</div>
+</div>
+        
+    </section>
+
+
+</section>
+
+
+
+
+<section id="" class="z-[10234] font-primary min-h-screen flex flex-col mx-margin-mobil lg:mx-margin-desktop gap-l items-center justify-start">
+   
+  <div id="filters" class="flex gap-4 sticky top-20 lg:top-10 z-[999999]">
+    <select id="yearFilter" class="bg-midnight-50 w-36 cursor-pointer lg:w-48 hover:bg-midnight-200 text-pink-100 font-primary appearance-none focus:outline-none focus:ring-0 focus:border-none  py-2 px-4 rounded-[4px] transition-all ease-in-out duration-300 transform hover:scale-[104%] ">
+      <option value="" class="">All years</option>
+      <option value="2025">2025</option>
+      <option value="2024">2024</option>
+      <option value="2023">2023</option>
+    </select>
+  
+    <select id="typeFilter" class="bg-midnight-50 w-36 lg:w-48 cursor-pointer hover:bg-midnight-200 text-pink-100 font-primary appearance-none focus:outline-none focus:ring-0 focus:border-transparent py-2 px-4 rounded-[4px] transition-all ease-in-out duration-300 transform hover:scale-[104%] ">
+      <option value="">All mediums</option>
+      <option value="painting">Painting</option>
+      <option value="digital">Digital</option>
+    </select>
+  </div>
+  
+      
+      
+      
+      
+      
+    
+      <!-- Gallery Section -->
+      <div id="gallery" class=" w-full  ">
+        <p id="load" class="text-pink-100 font-primary text-body-mobil text-center col-span-full   lg:text-body-desktop">Loading artworks...</p>
+      </div>
+
+
+    
+      <script type="module" >
+        const url =
+          "https://xkkjpixvvpitmnhdffgm.supabase.co/rest/v1/art_works";
+        const apikey =
+          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhra2pwaXh2dnBpdG1uaGRmZmdtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzcyMTg5NjMsImV4cCI6MjA1Mjc5NDk2M30.EMGeY2w0_Jh6UgreM32qNBTBOuA9R02HfO1QwZRX7CI";
+    
+        let artworks = [];
+        let filteredArtworks = [];
+    
+        const yearFilter = document.getElementById("yearFilter");
+        const typeFilter = document.getElementById("typeFilter");
+        const gallery = document.getElementById("gallery");
+    
+        // Fetch artworks from Supabase
+       // Fetch artworks from Supabase
+async function fetchArtworks() {
+  const response = await fetch(url, {
+    method: "GET",
+    headers: { apikey },
+  });
+  artworks = await response.json();
+  filteredArtworks = artworks; // Start by showing all artworks
+  renderArtworks(filteredArtworks);
+}
+
+// Render artworks to the DOM
+function renderArtworks(artworks) {
+  gallery.innerHTML = ""; // Clear the gallery
+  if (artworks.length === 0) {
+    gallery.innerHTML = "<p class='text-center col-span-full fade-in text-pink-100 text-body-mobil lg:text-body-desktop'>No artworks found.</p>";
+    return;
+  }
+
+  artworks.forEach((artwork) => {
+    const card = document.createElement("div");
+    card.innerHTML = `
+    <div class="bg-gradient-to-b mb-sm  break-inside-avoid from-gold-800 to-gold-200 p-xs">
+      <article
+        class=" bg-cover bg-no-repeat group"
+        style="background-image: url(${artwork.image});"
+      >
+        <div class="bg-midnight-500 group-hover:bg-none p-sm flex flex-col justify-between opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <div class="flex flex-col gap-m items-center">
+            <h1 class="text-center text-pink-100 font-primary text-h1-mobil">
+              ${artwork.title}
+            </h1>
+            <p class="self-start text-pink-100 font-primary text-body-mobil overflow-y-auto max-h-[300px]">
+              ${artwork.description} <br><br>
+            </p>
+            <p class="self-start text-pink-20 font-primary text-body-mobil overflow-y-auto max-h-[280px]">
+              Details: <br>
+              Size: ${artwork.size} <br>
+             Materials: ${artwork.materials}
+            </p>
+          </div>
+        </div>
+      </article>
+      </div>
+    `;
+    gallery.appendChild(card);
+  });
+}
+
+// Filter by year
+yearFilter.addEventListener("change", () => {
+  const year = yearFilter.value;
+  applyFilters(year, typeFilter.value); // Apply both filters
+});
+
+// Filter by type
+typeFilter.addEventListener("change", () => {
+  const type = typeFilter.value;
+  applyFilters(yearFilter.value, type); // Apply both filters
+});
+
+// Apply both year and type filters
+function applyFilters(year, type) {
+  filteredArtworks = artworks.filter(
+    (artwork) =>
+      (year === "" || artwork.year === parseInt(year)) &&
+      (type === "" || artwork.type === type)
+  );
+  renderArtworks(filteredArtworks); // Re-render artworks based on filters
+  
+}
+
+// Initial fetch on page load
+fetchArtworks();
+
+      </script>
+
+
+
+</section>
+
+
+
+
+
+</MainLayout>
+
+
+<style>
+
+
+#gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Four equal columns */
+  gap: 24px; /* Set the gap between items */
+  width: 100%; /* Full width of the container */
+}
+
+@media (max-width: 768px) {
+  #gallery {
+    grid-template-columns: repeat(1, 1fr); /* 1 column on small screens */
+    gap: 18px;
+  }
+}
+
+#gallery > div {
+  break-inside: avoid; /* Prevent breaking inside columns */
+}
+
+
+
+
+
+select {
+  -webkit-appearance: none;  /* Remove the arrow in Webkit browsers */
+  -moz-appearance: none;     /* Remove the arrow in Firefox */
+  appearance: none;          /* Remove the arrow in modern browsers */
+  background-color: #2A334480; /* Set the background color of the select */
+  color: #F8E7E1; /* Set text color */
+  border: 1px solid #2A3344; /* Border color */
+  border-radius: 4px; /* Rounded corners */
+  padding: 0.5rem 1rem; /* Padding for the select */
+}
+
+/* Remove focus outline */
+select:focus {
+  outline: none;
+}
+
+/* Custom styles for select options */
+select option {
+  background-color: #2A334480; /* Set background color for options */
+  color: #F8E7E1; /* Text color for options */
+  border: none; /* Remove any default borders from options */
+}
+
+/* Prevent default blue highlight on selected option */
+select option:checked {
+  background-color: #2A334480 !important; /* Use !important to override browser defaults */
+}
+
+/* Option background color when hovered */
+select option:hover {
+  background-color: #2A3344; /* Option background color when hovered */
+}
+
+
+	html{
+		scroll-behavior: smooth;
+	}
+	
+
+  
+  
+	</style>
+
+
+
+<script>
+
+
+
+import gsap from "gsap";
+ 
+ import { ScrollTrigger } from "gsap/ScrollTrigger";
+ 
+ gsap.registerPlugin(ScrollTrigger);
+
+ gsap.to(".bounce", {
+    y: -10,  delay: 0.8, ease: "power1.out", duration: 1, repeat: -1, yoyo: true,
+});
+
+
+gsap.to(".star", {
+  scale: 1.2,
+  opacity: 1, 
+  duration: 0.8, 
+  ease: "power1.inOut", 
+  repeat: -1, 
+  yoyo: true,
+  stagger: 0.1 
+});
+
+
+gsap.to(".star-7", {
+    scale: 1.2,
+  opacity: 1,
+  duration: 27, 
+  ease: "power1.inOut",
+  repeat: -1, 
+  yoyo: true, 
+  stagger: 0.1,
+  rotation: 360,
+});
+
+
+
+gsap.from(".fade-in",{
+opacity:0,
+duration:3,
+ease:"power1.inOut"
+
+
+});
+
+
+gsap.from("#load",{
+opacity:0,
+duration:3,
+ease:"power1.inOut",
+yoyo: true,
+repeat:-1,
+
+
+});
+
+
+
+gsap.from("#filters", {
+  scrollTrigger: {
+    trigger: "#gallery",
+    start: "top 90%", 
+    scrub: false, // Animation will not be tied to scroll progress
+  },
+  opacity: 0,
+  x:20,
+  duration: 1,
+  ease: "power2.out",
+  stagger: 0.1, // Stagger the animation of each element by 0.1 seconds
+});
+
+
+
+
+  
+    gsap.to(".card-1, .card-3",  {
+      scale: 1.01,
+      y:5,
+      duration: 1.5,
+      repeat: -1, // Infinite repetition
+      yoyo: true, // Reverse animation each time
+      ease: "power2.inOut", // Smooth ease
+    });
+  
+      
+    gsap.to(" .card-2",  {
+      scale: 1.01,
+      y:-5,
+      duration: 1.5,
+      repeat: -1, // Infinite repetition
+      yoyo: true, // Reverse animation each time
+      ease: "power2.inOut", // Smooth ease
+    });
+  
+
+    gsap.from("#gallery, #about-preview img, #about-preview p, #about-preview a", {
+  scrollTrigger: {
+    trigger: "#gallery",
+    start: "top 90%", 
+    scrub: false, // Animation will not be tied to scroll progress
+  },
+  opacity: 0,
+  x:-10,
+  duration: 1,
+  ease: "power2.out",
+  stagger: 0.1, // Stagger the animation of each element by 0.1 seconds
+});
+
+
+</script>
+
+

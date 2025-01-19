@@ -1,0 +1,54 @@
+---
+const { title, text, url = "#", bgImg = "", materials, size } = Astro.props;
+import Button from "./Button.astro";
+---
+<div class="p-xs bg-gradient-to-b from-gold-800 to-gold-200 mx-m">
+<article
+  class=" lg:mx-0 bg-cover bg-center h-[500px] w-[300px] group"
+  style={`background-image: url(${bgImg});`}
+>
+  <div
+    class="bg-midnight-500  group-hover:bg-none p-sm flex flex-col justify-between h-full  opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+  >
+    <!-- Container for header and text -->
+    <div class="flex flex-col gap-m items-center ">
+      <h1
+        class="text-center text-pink-100  font-primary text-h1-mobil  "
+      >
+        {title}
+      </h1>
+
+      <!-- Make the text scrollable if it overflows -->
+      <p
+        class=" min-h-[200px] self-start text-pink-100 font-primary text-body-mobil overflow-y-auto max-h-[300px] "
+      >
+        {text} <br> <br>
+    
+       
+    
+    </p>
+
+        <p
+        class="self-start text-pink-50 font-primary text-body-mobil overflow-y-auto max-h-[280px]"
+      >
+      Details: <br>
+      {size} <br>
+      {materials}
+      </p>
+    </div>
+
+   
+  </div>
+  
+</article>
+</div>
+
+<style>
+  /* Fjern standard scrollbars */
+  p::-webkit-scrollbar {
+    width: 0px; /* Smal scrollbar */
+  }
+ 
+
+ 
+</style>

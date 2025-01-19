@@ -8,6 +8,8 @@ export default {
 
 		extend: {
 
+    
+
       cursor: {
         'handcursor': 'url(/cursor.png) 25 25, pointer',
       },
@@ -49,6 +51,16 @@ export default {
 
       borderWidth:{
          DEFAULT:'1px',
+         'xxs': '2px',
+         'xs':'4px',
+         's':'8px',
+         'sm':'24px',
+         'm':'36px',
+         'ml':'50px',
+         'l':'70px',
+         'xl':'80px',
+         'xxl':'90px',
+         'full':'999px'
 
       },
 
@@ -75,11 +87,12 @@ export default {
      fontSize: {
         'h1-display-mobil': ['40px', { lineHeight: 'auto' }],
        'h1-mobil': ['34px', { lineHeight: 'auto' }],
-         'h2-mobil': ['38px', { lineHeight: 'auto' }],
+         'h2-mobil': ['24px', { lineHeight: 'auto' }],
          'h3-mobil': ['16px', { lineHeight: 'auto' }],
          'link-mobil': ['20px', { lineHeight: 'auto' }],
          'button-mobil': ['20px', { lineHeight: 'auto' }],
          'table-mobil': ['12px', { lineHeight: '32px' }],
+         'note-mobil': ['16px', { lineHeight: '32px' }],
          'body-mobil': ['16px', { lineHeight: 'auto' }],
 
          'h1-display-desktop': ['50px', { lineHeight: 'auto' }],
@@ -89,6 +102,7 @@ export default {
          'link-desktop': ['24px', { lineHeight: 'auto' }],
          'button-desktop': ['24px', { lineHeight: 'auto' }],
          'table-desktop': ['32px', { lineHeight: '32px' }],
+         'note-desktop': ['20px', { lineHeight: '32px' }],
          'body-desktop': ['20px', { lineHeight: 'auto' }],
         
       },
@@ -100,7 +114,7 @@ export default {
       },
 
    margin:{
-    'margin-mobil': '16px',
+    'margin-mobil': '60px',
     'margin-desktop': '96px',
 },
 
@@ -128,8 +142,17 @@ gap:{
                     500: '#EC97C0',
                    600: '#CB5D97',
                    
-                   50: '#F8E7E180',
+                   50: '#EC97C080',
+                   20:'#F8E7E180',
                  },
+
+
+                 gold: {
+                      
+                  200: '#F3DE8E',
+                  800: '#7A400D',
+                
+               },
 
                 
                   
@@ -142,5 +165,7 @@ gap:{
         require('@tailwindcss/forms'),
         require('@tailwindcss/aspect-ratio'),
         require('@tailwindcss/container-queries'),
+         require('@tailwindcss/forms'),
+    // Add this plugin to support border gradients if needed
     ],
 }
