@@ -188,12 +188,13 @@ import Card from "../components/Card.astro";
 
   <h1 class="h1 font-primary text-h1-mobil lg:text-h1-desktop text-pink-100">Works</h1>
 
-  <div id="gallery" class="card-1 z-40 grid overflow-x-scroll grid-cols-1 flex flex-row lg:grid-cols-3 gap-m"></div>
+  <div id="gallery" class="card-1 z-40   overflow-visible grid-cols-1 flex flex-row lg:grid-cols-3 gap-m"></div>
 
   <a href="/gallery">
     <Button input="View all" icon="/svg/icon-arrow-right-light.svg" variant="secondaryCTA"></Button>
   </a>
 </section>
+
 
 <script type="module">
   const url = "https://xkkjpixvvpitmnhdffgm.supabase.co/rest/v1/art_works";
@@ -232,21 +233,21 @@ import Card from "../components/Card.astro";
     artworks.forEach((artwork) => {
       const card = document.createElement("div");
       card.innerHTML = `
-        <div class="bg-gradient-to-b lg:h-[500px]  z-[100] card-1 lg:w-[400px] w-[300px] from-gold-800 to-gold-200 p-xs">
+        <div class="bg-gradient-to-b lg:h-[600px]  z-[100] card-1 lg:w-[400px] w-[300px] from-gold-800 to-gold-200 p-xs">
           <article
-            class="bg-cover bg-no-repeat group"
+            class="bg-cover bg-no-repeat bg-center group"
             style="background-image: url(${artwork.image});"
           >
-            <div class=" h-[493px]  bg-midnight-500 group-hover:bg-none p-sm flex flex-col justify-between opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <div class=" h-[593px]  bg-midnight-500 group-hover:bg-none p-sm flex flex-col justify-between opacity-0 group-hover:opacity-100 transition-opacity duration-300">
               <div class="flex flex-col gap-m items-center">
                 <h1 class="text-center text-pink-100 font-primary text-h1-mobil">
                   ${artwork.title}
                 </h1>
-                <p class="self-start text-pink-100 font-primary text-body-mobil overflow-y-auto max-h-[300px]">
+                <p class="styled-scroll self-start text-pink-100 font-primary text-body-mobil overflow-y-auto h-[300px]">
                   ${artwork.description} <br><br>
                 </p>
-                <p class="self-start text-pink-20 font-primary text-body-mobil overflow-y-auto max-h-[280px]">
-                  Details: <br>
+                <p class="self-start text-pink-20 font-primary text-body-mobil  max-h-[280px]">
+                 
                   ${artwork.size} <br>
                   ${artwork.materials}
                 </p>
@@ -390,10 +391,7 @@ import Card from "../components/Card.astro";
 }
 
 
-	html{
-		scroll-behavior: smooth;
-	}
-	
+
   
 	</style>
 

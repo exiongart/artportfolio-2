@@ -102,9 +102,9 @@ import Card from "../components/Card.astro";
   
     <select id="typeFilter" class="bg-midnight-50 w-36 lg:w-48 cursor-pointer hover:bg-midnight-200 text-pink-100 font-primary appearance-none focus:outline-none focus:ring-0 focus:border-transparent py-2 px-4 rounded-[4px] transition-all ease-in-out duration-300 transform hover:scale-[104%] ">
       <option value="">All mediums</option>
-      <option value="painting">Canvas</option>
+      <option value="canvas">Canvas</option>
       <option value="digital">Digital</option>
-      <option value="sketch">Paper</option>
+      <option value="paper">Paper</option>
     </select>
   </div>
   
@@ -157,28 +157,28 @@ function renderArtworks(artworks) {
   artworks.forEach((artwork) => {
     const card = document.createElement("div");
     card.innerHTML = `
-    <div class="bg-gradient-to-b mb-sm  break-inside-avoid from-gold-800 to-gold-200 p-xs">
-      <article
-        class=" bg-cover bg-no-repeat group"
-        style="background-image: url(${artwork.image});"
-      >
-        <div class="bg-midnight-500 group-hover:bg-none p-sm flex flex-col justify-between opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          <div class="flex flex-col gap-m items-center">
-            <h1 class="text-center text-pink-100 font-primary text-h1-mobil">
-              ${artwork.title}
-            </h1>
-            <p class="self-start text-pink-100 font-primary text-body-mobil overflow-y-auto max-h-[300px]">
-              ${artwork.description} <br><br>
-            </p>
-            <p class="self-start text-pink-20 font-primary text-body-mobil overflow-y-auto max-h-[280px]">
-              Details: <br>
-              Size: ${artwork.size} <br>
-             Materials: ${artwork.materials}
-            </p>
-          </div>
+    <div class="bg-gradient-to-b lg:h-[530px]  z-[100]  from-gold-800 to-gold-200 p-xs">
+          <article
+            class="bg-cover bg-no-repeat bg-center group"
+            style="background-image: url(${artwork.image});"
+          >
+            <div class=" h-[523px]  bg-midnight-500 group-hover:bg-none p-sm flex flex-col justify-between opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div class="flex flex-col gap-m items-center">
+                <h1 class="text-center text-pink-100 font-primary text-h1-mobil">
+                  ${artwork.title}
+                </h1>
+                <p class="styled-scroll self-start text-pink-100 font-primary text-body-mobil overflow-y-auto h-[300px]">
+                  ${artwork.description} <br><br>
+                </p>
+                <p class="self-start text-pink-20 font-primary text-body-mobil  max-h-[280px]">
+                 
+                  ${artwork.size} <br>
+                  ${artwork.materials}
+                </p>
+              </div>
+            </div>
+          </article>
         </div>
-      </article>
-      </div>
     `;
     gallery.appendChild(card);
   });
@@ -282,12 +282,8 @@ select option:hover {
 }
 
 
-	html{
-		scroll-behavior: smooth;
-	}
-	
 
-  
+
   
 	</style>
 
