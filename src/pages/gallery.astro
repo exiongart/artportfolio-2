@@ -105,12 +105,12 @@ import Card from "../components/Card.astro";
       <option value="canvas">Canvas</option>
       <option value="digital">Digital</option>
       <option value="paper">Paper</option>
+      <option value="video">Video</option>
     </select>
   </div>
   
       
-      
-      
+
       
       
     
@@ -146,43 +146,78 @@ async function fetchArtworks() {
   renderArtworks(filteredArtworks);
 }
 
-// Render artworks to the DOM
+
 function renderArtworks(artworks) {
   gallery.innerHTML = ""; // Clear the gallery
   if (artworks.length === 0) {
     gallery.innerHTML = "<p class='text-center col-span-full fade-in text-pink-100 text-body-mobil lg:text-body-desktop'>No artworks found.</p>";
     return;
   }
-
   artworks.forEach((artwork) => {
-    const card = document.createElement("div");
+  const card = document.createElement("div");
+
+  if (artwork.type === "video") {
+    // Video card
     card.innerHTML = `
-    <div class="bg-gradient-to-b lg:h-[530px]  z-[100]  from-gold-800 to-gold-200 p-xs">
-          <article
-            class="bg-cover bg-no-repeat bg-center group"
-            style="background-image: url(${artwork.image});"
-          >
-            <div class=" h-[523px]  bg-midnight-500 group-hover:bg-none p-sm flex flex-col justify-between opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <div class="flex flex-col gap-m items-center">
-                <h1 class="text-center text-pink-100 font-primary text-h1-mobil">
-                  ${artwork.title}
-                </h1>
-                <p class="styled-scroll self-start text-pink-100 font-primary text-body-mobil overflow-y-auto h-[300px]">
-                  ${artwork.description} <br><br>
-                </p>
-                <p class="self-start text-pink-20 font-primary text-body-mobil  max-h-[280px]">
-                 
-                  ${artwork.size} <br>
-                  ${artwork.materials}
-                </p>
-              </div>
-            </div>
-          </article>
-        </div>
+<div class="bg-gradient-to-b lg:h-[530px] z-[100] from-gold-800 to-gold-200 p-xs relative group">
+  <!-- Video element -->
+  <video
+    class="h-[520px] w-full object-cover"
+    muted
+    controlsList="nodownload"
+    controls
+  >
+    <source src="${artwork.image}" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+
+  <div class="absolute inset-0 bg-midnight-500 bg-opacity-50 p-sm flex flex-col justify-start gap-m opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-[200] pointer-events-none">
+    <h1 class="text-center text-pink-100 font-primary text-h1-mobil">
+      "${artwork.title}"
+    </h1>
+    <p class="self-start text-pink-100 font-primary text-body-mobil overflow-y-auto h-[120px] styled-scroll">
+      ${artwork.description}
+    </p>
+  </div>
+</div>
+
+
+
     `;
-    gallery.appendChild(card);
-  });
+  } else {
+    // Image card
+    card.innerHTML = `
+  <div class="bg-gradient-to-b lg:h-[530px] z-[100] from-gold-800 to-gold-200 p-xs">
+  <article
+    class="bg-cover bg-no-repeat bg-center group"
+    style="background-image: url(${artwork.image});"
+  >
+    <div class="h-[523px] bg-midnight-500 group-hover:bg-none p-sm flex flex-col justify-between opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+      <div class="flex flex-col gap-m items-center overflow-hidden">
+        <h1 class="text-center text-pink-100 font-primary text-h1-mobil overflow-hidden">
+          "${artwork.title}"
+        </h1>
+        <p class="styled-scroll self-start text-pink-100 font-primary text-body-mobil overflow-y-auto h-[220px]">
+          ${artwork.description} <br><br>
+        </p>
+        <p class="self-start text-pink-20 font-primary text-body-mobil max-h-[280px]">
+          ${artwork.size} <br>
+          ${artwork.materials}
+        </p>
+      </div>
+    </div>
+  </article>
+</div>
+
+    `;
+  }
+
+  gallery.appendChild(card);
+});
+
 }
+
 
 // Filter by year
 yearFilter.addEventListener("change", () => {
