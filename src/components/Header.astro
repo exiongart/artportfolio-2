@@ -13,6 +13,7 @@ import Button from "./Button.astro"
   
   <div id="overlay" class="lg:hidden bg-[url('/svg/nightsky.png')] bg-cover bg-center z-0 h-screen fixed top-0 w-screen flex flex-col items-center justify-center opacity-0 pointer-events-none transition-all duration-500 ease-in-out">
     <ul class="flex flex-col items-center justify-center gap-ml">
+      <li><Link variant="primary" size="mobile" input="Prints" href="https://www.inprnt.com/profile/exiongart/"></Link></li>
       <li><Link variant="primary" size="mobile" input="Commissions" href="/commissions"></Link></li>
       <li><Link variant="primary" size="mobile" input="Contact" href="#footer"></Link></li>
       <li><Link variant="primary" size="mobile" input="About" href="/about"></Link></li>
@@ -68,7 +69,10 @@ import Button from "./Button.astro"
     <div class="flex justify-between w-full items-center">
       <a class="text-pink-100 font-primary text-[50px]" href="/">Emily Xiong</a>
       <div class="flex flex-row items-center gap-ml">
+
+        <Link input="Prints" underline={true} href="https://www.inprnt.com/profile/exiongart/" variant="primary" size="desktop"></Link>
         <div class="group relative">
+       
         <Link input="Commissions" href="/commissions" underline={true} variant="primary" size="desktop"></Link>
 
         <div class="dropdown-menu rounded-xs z-0 absolute left-0 flex flex-col  justify-start items-center bg-midnight-50 w-full overflow-hidden  shadow-lg">
